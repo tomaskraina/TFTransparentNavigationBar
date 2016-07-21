@@ -64,13 +64,15 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         if self.navigationBarStyleTransition == .toSolid {
             // Set move toView to the left about 30% of its width
             var shiftedFrame = CGRectOffset(fromFrame, -(fromFrame.width * 0.3), 0)
-            shiftedFrame.size.height -= 64
-            shiftedFrame.origin.y += 64
+            
+            let shift: CGFloat = 0 // was 64
+            shiftedFrame.size.height -= shift
+            shiftedFrame.origin.y += shift
             toView.frame = shiftedFrame
             
             toFrame = fromFrame
-            toFrame.size.height -= 64
-            toFrame.origin.y += 64
+            toFrame.size.height -= shift
+            toFrame.origin.y += shift
             // Final frame for fromView and fromViewSnapshot
             fromViewFinalFrame = CGRectOffset(fromView.frame, fromView.frame.width, 0)
             
