@@ -22,6 +22,17 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
     private var temporaryBackgroundImage: UIImage?
     var navigationBarSnapshots: Dictionary<Int, UIView> = Dictionary()
     
+    
+    public override var viewControllers: [UIViewController] {
+        didSet {
+            // Because delegate is not being called when navigation stack changes
+            viewControllers.last.flatMap {
+                delegate?.navigationController?(self, willShowViewController: $0, animated: false)
+            }
+        }
+    }
+    
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         
@@ -100,8 +111,7 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
         viewController.automaticallyAdjustsScrollViewInsets = false
         
         // Support transparent navigation bar for the root view controller
-        if viewControllers.count == 1,
-            let topViewController = topViewController as? TFTransparentNavigationBarProtocol
+        if let topViewController = topViewController as? TFTransparentNavigationBarProtocol
             where topViewController.navigationControllerBarPushStyle() == .Transparent {
             setupNavigationBarByStyle(.toTransparent)
         }
