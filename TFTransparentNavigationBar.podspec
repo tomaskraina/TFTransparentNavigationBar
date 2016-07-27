@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "TFTransparentNavigationBar"
-  s.version          = "0.2.0"
+  s.version          = "0.2.1"
   s.summary          = "Custom transition between controllers in UINavigationController that makes navigation bar transparent on specified controllers."
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/thefuntasty/TFTransparentNavigationBar"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Ales Kocur" => "ales@thefuntasty.com" }
+  s.author           = { "Ales Kocur" => "ales@thefuntasty.com", "Tom Kraina" => "me@tomkraina.com" }
   s.source           = { :git => "https://github.com/thefuntasty/TFTransparentNavigationBar.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
