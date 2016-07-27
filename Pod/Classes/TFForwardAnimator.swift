@@ -49,7 +49,7 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         
         if self.navigationBarStyleTransition == .toSolid {
             
-            let shift: CGFloat = 0 // was -64
+            let shift: CGFloat = -64
             let shiftedFrame = navigationControllerFrame.additiveRect(shift, direction: .Top)
             // Move toView to the right
             toView.frame = CGRectOffset(shiftedFrame, shiftedFrame.width, 0)

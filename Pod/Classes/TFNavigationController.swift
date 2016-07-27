@@ -93,6 +93,13 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
     
     // MARK: - UINavigationControllerDelegate
     
+    public func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+        
+        // Make sure all view controllers that are presented by this navigation controller
+        // have this set to false to prevent layout issues and blinking causes by wrong scroll insets
+        viewController.automaticallyAdjustsScrollViewInsets = false
+    }
+    
     public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         if operation == .Push {

@@ -76,7 +76,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
             // Set move toView to the left about 30% of its width
             var shiftedFrame = CGRectOffset(fromFrame, -(fromFrame.width * 0.3), 0)
             
-            let shift: CGFloat = 0 // was 64
+            let shift: CGFloat = 64 // 0 or make sure automaticallyAdjustScrollViewInsets is off
             shiftedFrame.size.height -= shift
             shiftedFrame.origin.y += shift
             toView.frame = shiftedFrame
