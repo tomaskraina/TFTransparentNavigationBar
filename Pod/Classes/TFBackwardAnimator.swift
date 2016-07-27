@@ -31,7 +31,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         let fromView = context.viewForKey(UITransitionContextFromViewKey)!
         let duration = self.transitionDuration(context)
 
-        let fromFrame = context.initialFrameForViewController(fromViewController)
+        var fromFrame = context.initialFrameForViewController(fromViewController)
         
         var toViewControllerNavigationBarSnapshot: UIView!
         
@@ -60,6 +60,17 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         let navigationControllerFrame = navigationController.view.frame
         var toFrame: CGRect = CGRectOffset(fromFrame, -(fromFrame.width * 0.3), 0)
         var fromViewFinalFrame: CGRect = CGRectOffset(fromView.frame, fromView.frame.width, 0)
+        
+        
+        if fromViewController.hidesBottomBarWhenPushed && !toViewController.hidesBottomBarWhenPushed {
+            // We can assume that fromViewController has the bottom bar hidden
+            // whereas toViewController has the bottom bar shown
+            // thus we need to reduce the height of the toFrame by the height of the bottom bar
+            
+            fromFrame.size.height -= (toViewController.tabBarController?.tabBar.frame.height ?? 0)
+        }
+        
+        
         
         if self.navigationBarStyleTransition == .toSolid {
             // Set move toView to the left about 30% of its width
