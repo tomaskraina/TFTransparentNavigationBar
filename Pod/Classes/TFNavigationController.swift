@@ -98,6 +98,13 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
         // Make sure all view controllers that are presented by this navigation controller
         // have this set to false to prevent layout issues and blinking causes by wrong scroll insets
         viewController.automaticallyAdjustsScrollViewInsets = false
+        
+        // Support transparent navigation bar for the root view controller
+        if viewControllers.count == 1,
+            let topViewController = topViewController as? TFTransparentNavigationBarProtocol
+            where topViewController.navigationControllerBarPushStyle() == .Transparent {
+            setupNavigationBarByStyle(.toTransparent)
+        }
     }
     
     public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
