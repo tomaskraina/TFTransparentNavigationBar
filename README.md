@@ -20,6 +20,7 @@ iOS 8 and later, Swift 2.0. No Apple-private API used.
 - ~~Navigation bar keeps title during pop transition FIXED (but still problem with interactive transition)~~
 - ~~First transition to controller with transparent navbar moves with fromView frame~~
 - ~~Setting a VC with `.Transparent` as a root VC for an instance of `TFNavigationController` doesn't make the navigation bar transparent~~
+- Simple crossfade animation is applied to the navigation bar: http://stackoverflow.com/a/21614376/1161723
 
 ## Installation
 
