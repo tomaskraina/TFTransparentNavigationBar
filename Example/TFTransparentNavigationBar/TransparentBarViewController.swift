@@ -9,17 +9,32 @@
 import UIKit
 import TFTransparentNavigationBar
 
-class TransparentBarViewController: UIViewController, TFTransparentNavigationBarProtocol {
 
+class TransparentBarViewController: UIViewController, TFTransparentNavigationBarProtocol, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var tableView: UITableView!
+    
+    var viewFadingBehaviour = ViewFadingBehaviour()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        setUpFading(viewFadingBehaviour, forTableView: tableView)
+        
+        print(self.navigationController?.navigationBar.frame)
+
     }
 
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+    
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,4 +59,15 @@ class TransparentBarViewController: UIViewController, TFTransparentNavigationBar
     }
     */
 
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 25
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        
+        return cell
+    }
+    
 }

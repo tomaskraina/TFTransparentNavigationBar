@@ -13,8 +13,10 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		90CEB0F61BC014130065CBEB /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90CEB0F51BC014130065CBEB /* beach.jpg */; settings = {ASSET_TAGS = (); }; };
-		90CEB0F81BC0151E0065CBEB /* TransparentBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CEB0F71BC0151E0065CBEB /* TransparentBarViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		90CEB0F61BC014130065CBEB /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90CEB0F51BC014130065CBEB /* beach.jpg */; };
+		90CEB0F81BC0151E0065CBEB /* TransparentBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CEB0F71BC0151E0065CBEB /* TransparentBarViewController.swift */; };
+		9C81AACE1D50E19F0036BE82 /* FadingViewBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AACD1D50E1740036BE82 /* FadingViewBehaviour.swift */; };
+		9C81AAD01D50E1B20036BE82 /* UIViewController+NavigationBarBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AACF1D50E1B20036BE82 /* UIViewController+NavigationBarBackground.swift */; };
 		A9FAB755CE5527B81C8EA59A /* Pods_TFTransparentNavigationBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CFDF00DE9F96491736C744 /* Pods_TFTransparentNavigationBar_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		7D7C4A7339D0240CF88CF366 /* Pods_TFTransparentNavigationBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFTransparentNavigationBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90CEB0F51BC014130065CBEB /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
 		90CEB0F71BC0151E0065CBEB /* TransparentBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentBarViewController.swift; sourceTree = "<group>"; };
+		9C81AACD1D50E1740036BE82 /* FadingViewBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingViewBehaviour.swift; sourceTree = "<group>"; };
+		9C81AACF1D50E1B20036BE82 /* UIViewController+NavigationBarBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBarBackground.swift"; sourceTree = "<group>"; };
 		E0238FD55CDE136FB410D87A /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTransparentNavigationBar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFTransparentNavigationBar_Tests/Pods-TFTransparentNavigationBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F3CFDF00DE9F96491736C744 /* Pods_TFTransparentNavigationBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFTransparentNavigationBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57585FEB8B92C7C866E930F /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTransparentNavigationBar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFTransparentNavigationBar_Example/Pods-TFTransparentNavigationBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		607FACD21AFB9204008FA782 /* Example for TFTransparentNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
+				9C81AACD1D50E1740036BE82 /* FadingViewBehaviour.swift */,
+				9C81AACF1D50E1B20036BE82 /* UIViewController+NavigationBarBackground.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				90CEB0F71BC0151E0065CBEB /* TransparentBarViewController.swift */,
@@ -363,7 +369,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C81AAD01D50E1B20036BE82 /* UIViewController+NavigationBarBackground.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				9C81AACE1D50E19F0036BE82 /* FadingViewBehaviour.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				90CEB0F81BC0151E0065CBEB /* TransparentBarViewController.swift in Sources */,
 			);
