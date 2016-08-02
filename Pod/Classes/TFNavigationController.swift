@@ -23,6 +23,16 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
     var navigationBarSnapshots: Dictionary<Int, UIView> = Dictionary()
     
     
+    func createNavigationBarSnapshot(fromViewController: UIViewController) {
+        
+        let navbarSnapshot = self.navigationBar.resizableSnapshotViewFromRect(self.navigationBar.bounds.additiveRect(20, direction: .Top), afterScreenUpdates: false, withCapInsets: UIEdgeInsetsMake(0, 0, 0, 0))
+        
+        // Save snapshot of navigation bar for pop animation
+        if let index = self.viewControllers.indexOf(fromViewController) {
+            self.navigationBarSnapshots[index] = navbarSnapshot
+        }
+    }
+    
     public override var viewControllers: [UIViewController] {
         didSet {
             // Because delegate is not being called when navigation stack changes
@@ -51,7 +61,11 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
     }
     
     func handleSwipeFromLeft(gesture: UIScreenEdgePanGestureRecognizer) {
-        let percent = gesture.translationInView(gesture.view!).x / gesture.view!.bounds.size.width
+        
+        let location = gesture.translationInView(gesture.view!)
+        let width = gesture.view!.bounds.size.width
+        
+        let ratio = location.x / width
         
         if gesture.state == .Began {
             interactionController = UIPercentDrivenInteractiveTransition()
@@ -62,10 +76,10 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
                 dismissViewControllerAnimated(true, completion: nil)
             }
         } else if gesture.state == .Changed {
-            interactionController?.updateInteractiveTransition(percent)
+            interactionController?.updateInteractiveTransition(ratio)
         } else if gesture.state == .Ended || gesture.state == .Cancelled || gesture.state == .Failed {
             
-            if percent > 0.5 {
+            if ratio > 0.5 {
                 interactionController?.finishInteractiveTransition()
             } else {
                 interactionController?.cancelInteractiveTransition()
@@ -150,7 +164,7 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
         var styleTransition: TFNavigationBarStyleTransition!
         
         if fromStyle == toStyle {
-            return nil
+            styleTransition = .toSame
         } else if fromStyle == .Transparent && toStyle == .Solid {
             styleTransition = .toSolid
         } else if fromStyle == .Solid && toStyle == .Transparent {
@@ -175,10 +189,8 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
         }
         var styleTransition: TFNavigationBarStyleTransition!
         
-        if fromStyle == .Solid && toStyle == .Solid {
-            return nil
-        } else if (fromStyle == .Transparent && toStyle == .Transparent) {
-            return nil
+        if fromStyle == toStyle {
+            styleTransition = .toSame
         } else if fromStyle == .Solid && toStyle == .Transparent {
             styleTransition = .toTransparent
         } else if fromStyle == .Transparent && toStyle == .Solid {

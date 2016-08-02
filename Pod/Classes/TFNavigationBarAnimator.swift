@@ -35,4 +35,13 @@ class TFNavigationBarAnimator: NSObject {
         self.isInteractive = isInteractive
     }
     
+    func addShadows(views: [UIView]) {
+        views.forEach {
+            $0.layer.shadowOffset = CGSizeMake(0.0, 0.0)
+            $0.layer.shadowColor = UIColor.blackColor().CGColor
+            $0.layer.shadowRadius = 5.0
+            $0.layer.shadowOpacity = 0.5
+            $0.layer.shadowPath = UIBezierPath(rect: $0.bounds).CGPath
+        }
+    }
 }
