@@ -93,6 +93,10 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
 
     public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
+        guard self != presented else {
+            return nil
+        }
+        
         return self.forwardAnimator(source, toViewController: presented)
     }
     
