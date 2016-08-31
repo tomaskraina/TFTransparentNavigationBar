@@ -102,7 +102,7 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
     
     public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        if (viewControllers.count < 2) {
+        guard self != dismissed && viewControllers.count > 1 else {
             return nil
         }
         
