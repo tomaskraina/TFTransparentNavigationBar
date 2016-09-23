@@ -16,7 +16,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
     
     func animateTransition(context: UIViewControllerContextTransitioning) {
         
-        let containerView = context.containerView()!
+        let containerView = context.containerView()
         let toView = context.viewForKey(UITransitionContextToViewKey)!
         let fromView = context.viewForKey(UITransitionContextFromViewKey)!
         let options: UIViewAnimationOptions = isInteractive ? [.CurveLinear] : [.CurveEaseOut]
@@ -64,7 +64,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
     
     func animateTransition(containerView: UIView, fromView: UIView, toView: UIView, duration: NSTimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
         
-        let containerView = context.containerView()!
+        let containerView = context.containerView()
         let fromViewController = context.viewControllerForKey(UITransitionContextFromViewControllerKey)!
         let toViewController = context.viewControllerForKey(UITransitionContextToViewControllerKey)!
         
@@ -83,7 +83,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         toView.userInteractionEnabled = false
         
         // Create snapshot from navigation controller content
-        let fromViewSnapshot = fromViewController.navigationController!.view.snapshotViewAfterScreenUpdates(false)
+        let fromViewSnapshot = fromViewController.navigationController!.view.snapshotViewAfterScreenUpdates(false)!
         
         self.navigationController.setupNavigationBarByStyle(self.navigationBarStyleTransition)
         

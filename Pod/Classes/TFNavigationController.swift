@@ -53,7 +53,7 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
         delegate = self                // for navigation controller custom transitions
         //interactivePopGestureRecognizer?.delegate = nil
         
-        let left = UIScreenEdgePanGestureRecognizer(target: self, action: "handleSwipeFromLeft:")
+        let left = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(TFNavigationController.handleSwipeFromLeft(_:)))
         left.edges = .Left
         self.view.addGestureRecognizer(left);
         
