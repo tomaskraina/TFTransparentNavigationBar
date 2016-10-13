@@ -175,6 +175,9 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
                 if context.transitionWasCancelled() {
                     self.navigationController.setupNavigationBarByStyle(self.navigationBarStyleTransition.reverse())
                     fromView.hidden = false
+                    
+                    // fromView.frame needs to be reset to it's original value, otherwise it's size is .zero (iOS 10)
+                    fromView.frame = fromFrame
                 }
                 
                 context.completeTransition(!context.transitionWasCancelled())
