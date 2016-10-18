@@ -102,25 +102,26 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         let navigationControllerFrame = navigationController.view.frame
         var toViewFinalFrame: CGRect = CGRectOffset(fromFrame, -(fromFrame.width * 0.3), 0)
         var fromViewFinalFrame: CGRect = CGRectOffset(fromView.frame, fromView.frame.width, 0)
+        var toFrame: CGRect = fromFrame
         
-        if fromViewController.hidesBottomBarWhenPushed && !toViewController.hidesBottomBarWhenPushed {
+        if fromViewController.hidesBottomBarWhenPushed && navigationController.viewControllers.filter({ $0.hidesBottomBarWhenPushed }).count == 0 {
             // We can assume that fromViewController has the bottom bar hidden
             // whereas toViewController has the bottom bar shown
             // thus we need to reduce the height of the toFrame by the height of the bottom bar
             
-            fromFrame.size.height -= (toViewController.tabBarController?.tabBar.frame.height ?? 0)
+            toFrame.size.height -= (toViewController.tabBarController?.tabBar.frame.height ?? 0)
         }
         
         if self.navigationBarStyleTransition == .toSolid {
             // Set move toView to the left about 30% of its width
-            var shiftedFrame = CGRectOffset(fromFrame, -(fromFrame.width * 0.3), 0)
+            var shiftedFrame = CGRectOffset(toFrame, -(toFrame.width * 0.3), 0)
             
             let shift: CGFloat = 64 // 0 or make sure automaticallyAdjustScrollViewInsets is off
             shiftedFrame.size.height -= shift
             shiftedFrame.origin.y += shift
             toView.frame = shiftedFrame
             
-            toViewFinalFrame = fromFrame
+            toViewFinalFrame = toFrame
             toViewFinalFrame.size.height -= shift
             toViewFinalFrame.origin.y += shift
             // Final frame for fromView and fromViewSnapshot
