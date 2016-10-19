@@ -72,9 +72,8 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
             
             if viewControllers.count > 1 {
                 popViewControllerAnimated(true)
-            } else {
-                dismissViewControllerAnimated(true, completion: nil)
             }
+            
         } else if gesture.state == .Changed {
             interactionController?.updateInteractiveTransition(ratio)
         } else if gesture.state == .Ended || gesture.state == .Cancelled || gesture.state == .Failed {
