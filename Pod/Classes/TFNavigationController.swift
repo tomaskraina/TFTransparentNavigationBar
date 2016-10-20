@@ -18,6 +18,9 @@ import UIKit
 
 public class TFNavigationController: UINavigationController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, UINavigationBarDelegate {
     
+    /// Use this property to disable swipe to pop
+    public private(set) weak var edgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer?
+    
     private var interactionController: UIPercentDrivenInteractiveTransition?
     private var temporaryBackgroundImage: UIImage?
     var navigationBarSnapshots: Dictionary<Int, UIView> = Dictionary()
@@ -53,10 +56,10 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
         delegate = self                // for navigation controller custom transitions
         //interactivePopGestureRecognizer?.delegate = nil
         
-        let left = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(TFNavigationController.handleSwipeFromLeft(_:)))
-        left.edges = .Left
-        self.view.addGestureRecognizer(left);
-        
+        let recognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(TFNavigationController.handleSwipeFromLeft(_:)))
+        recognizer.edges = .Left
+        self.view.addGestureRecognizer(recognizer)
+        edgePanGestureRecognizer = recognizer
         
     }
     
