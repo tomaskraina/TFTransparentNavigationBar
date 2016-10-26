@@ -184,4 +184,13 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
                 context.completeTransition(!context.transitionWasCancelled())
         })
     }
+    
+    func animationEnded(transitionCompleted: Bool) {
+        
+        // Sometimes, when a first view controller is popped out of navigation controller,
+        // the view controller has hidesBottomBarOnPush=true, and tab bar has a custom subview added,
+        // a tab bar controller (parent of the navigation controler) shrinks its content view
+        // after the transition is completed. Calling `setNeedsLayout` fixes it.
+        navigationController.tabBarController?.view.setNeedsLayout()
+    }
 }
