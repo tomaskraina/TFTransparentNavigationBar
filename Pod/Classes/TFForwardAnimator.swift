@@ -10,17 +10,17 @@ import UIKit
 
 class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransitioning {
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.35
     }
     
-    func animateTransition(context: UIViewControllerContextTransitioning) {
+    func animateTransition(using context: UIViewControllerContextTransitioning) {
         
-        let containerView = context.containerView()
-        let toView = context.viewForKey(UITransitionContextToViewKey)!
-        let fromView = context.viewForKey(UITransitionContextFromViewKey)!
-        let options: UIViewAnimationOptions = isInteractive ? [.CurveLinear] : [.CurveEaseOut]
-        let duration = self.transitionDuration(context)
+        let containerView = context.containerView
+        let toView = context.view(forKey: UITransitionContextViewKey.to)!
+        let fromView = context.view(forKey: UITransitionContextViewKey.from)!
+        let options: UIViewAnimationOptions = isInteractive ? [.curveLinear] : [.curveEaseOut]
+        let duration = self.transitionDuration(using: context)
         
         // Insert toView above from view
         containerView.insertSubview(toView, aboveSubview: fromView)
@@ -36,13 +36,13 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
     }
     
     
-    func animateToSolid(containerView: UIView, fromView: UIView, toView: UIView, duration: NSTimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
+    func animateToSolid(_ containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
         
-        let fromViewController = context.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-        let toViewController = context.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        let fromViewController = context.viewController(forKey: UITransitionContextViewControllerKey.from)!
+        let toViewController = context.viewController(forKey: UITransitionContextViewControllerKey.to)!
         
         // Create snapshot from navigation controller content
-        let fromViewSnapshot = fromViewController.navigationController!.view.snapshotViewAfterScreenUpdates(false)!
+        let fromViewSnapshot = fromViewController.navigationController!.view.snapshotView(afterScreenUpdates: false)!
         
         // Create snapshot of navigation bar
         navigationController.createNavigationBarSnapshot(fromViewController)
@@ -51,31 +51,31 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         containerView.insertSubview(fromViewSnapshot, belowSubview: toView)
         
         // hide fromView and use snapshot instead
-        fromView.hidden = true
+        fromView.isHidden = true
         
         self.navigationController.setupNavigationBarByStyle(self.navigationBarStyleTransition)
         
         let navigationControllerFrame = navigationController.view.frame
         
-        var toViewFinalFrame = context.finalFrameForViewController(toViewController)
-        toViewFinalFrame = toViewFinalFrame.additiveRect(-64, direction: .Top)
+        var toViewFinalFrame = context.finalFrame(for: toViewController)
+        toViewFinalFrame = toViewFinalFrame.additiveRect(-64, direction: .top)
         
         // Move toView to the right
-        toView.frame = CGRectOffset(toViewFinalFrame, toViewFinalFrame.width, 0)
+        toView.frame = toViewFinalFrame.offsetBy(dx: toViewFinalFrame.width, dy: 0)
         
         // Calculate final frame for fromView and fromViewSnapshot
-        let fromViewFinalFrame = CGRectOffset(navigationControllerFrame, -(navigationControllerFrame.width * 0.3), 0)
+        let fromViewFinalFrame = navigationControllerFrame.offsetBy(dx: -(navigationControllerFrame.width * 0.3), dy: 0)
         
         // Save origin navigation bar frame
         let navigationBarFinalFrame = self.navigationController.navigationBar.frame
         
         // Shift bar
-        self.navigationController.navigationBar.frame = CGRectOffset(navigationBarFinalFrame, navigationBarFinalFrame.width, 0)
+        self.navigationController.navigationBar.frame = navigationBarFinalFrame.offsetBy(dx: navigationBarFinalFrame.width, dy: 0)
         
         addShadows([toView])
         
         
-        UIView.animateWithDuration(duration, delay: 0.0, options: options, animations: { () -> Void in
+        UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: { () -> Void in
             
             toView.frame = toViewFinalFrame
             fromViewSnapshot.frame = fromViewFinalFrame
@@ -86,23 +86,23 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
             }, completion: { (completed) -> Void in
                 // Show fromView
                 fromView.frame = fromViewFinalFrame
-                fromView.hidden = false
+                fromView.isHidden = false
                 // Remove snapshot
                 fromViewSnapshot.removeFromSuperview()
                 // Inform about transaction completion state
-                context.completeTransition(!context.transitionWasCancelled())
+                context.completeTransition(!context.transitionWasCancelled)
         })
         
     }
     
     
-    func animateToTransparent(containerView: UIView, fromView: UIView, toView: UIView, duration: NSTimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
+    func animateToTransparent(_ containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
         
-        let fromViewController = context.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-        let toViewController = context.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        let fromViewController = context.viewController(forKey: UITransitionContextViewControllerKey.from)!
+        let toViewController = context.viewController(forKey: UITransitionContextViewControllerKey.to)!
         
         // Create snapshot from navigation controller content
-        let fromViewSnapshot = fromViewController.navigationController!.view.snapshotViewAfterScreenUpdates(false)!
+        let fromViewSnapshot = fromViewController.navigationController!.view.snapshotView(afterScreenUpdates: false)!
         
         // Create snapshot of navigation bar
         navigationController.createNavigationBarSnapshot(fromViewController)
@@ -111,31 +111,31 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         containerView.insertSubview(fromViewSnapshot, belowSubview: toView)
         
         // hide fromView and use snapshot instead
-        fromView.hidden = true
+        fromView.isHidden = true
         
         self.navigationController.setupNavigationBarByStyle(self.navigationBarStyleTransition)
         
         let navigationControllerFrame = navigationController.view.frame
         
-        let toViewFinalFrame: CGRect = context.finalFrameForViewController(toViewController)
+        let toViewFinalFrame: CGRect = context.finalFrame(for: toViewController)
         
         // Move toView to the right
-        toView.frame = CGRectOffset(toViewFinalFrame, toViewFinalFrame.width, 0)
+        toView.frame = toViewFinalFrame.offsetBy(dx: toViewFinalFrame.width, dy: 0)
         
         // Calculate final frame for fromView and fromViewSnapshot
-        let fromViewFinalFrame = CGRectOffset(navigationControllerFrame, -(navigationControllerFrame.width * 0.3), 0)
+        let fromViewFinalFrame = navigationControllerFrame.offsetBy(dx: -(navigationControllerFrame.width * 0.3), dy: 0)
         
         // Save origin navigation bar frame
         let navigationBarFrame = self.navigationController.navigationBar.frame
         
         // Shift bar
-        self.navigationController.navigationBar.frame = CGRectOffset(navigationBarFrame, navigationBarFrame.width, 0)
+        self.navigationController.navigationBar.frame = navigationBarFrame.offsetBy(dx: navigationBarFrame.width, dy: 0)
         
         addShadows([toView])
         
         
         
-        UIView.animateWithDuration(duration, delay: 0.0, options: options, animations: { () -> Void in
+        UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: { () -> Void in
             
             toView.frame = toViewFinalFrame
             fromViewSnapshot.frame = fromViewFinalFrame
@@ -146,32 +146,32 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
             }, completion: { (completed) -> Void in
                 // Show fromView
                 fromView.frame = fromViewFinalFrame
-                fromView.hidden = false
+                fromView.isHidden = false
                 // Remove snapshot
                 fromViewSnapshot.removeFromSuperview()
                 // Inform about transaction completion state
-                context.completeTransition(!context.transitionWasCancelled())
+                context.completeTransition(!context.transitionWasCancelled)
         })
     }
     
-    func animateToSame(containerView: UIView, fromView: UIView, toView: UIView, duration: NSTimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
+    func animateToSame(_ containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
         
-        let fromViewController = context.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-        let toViewController = context.viewControllerForKey(UITransitionContextToViewControllerKey)!
-        let toViewFinalFrame = context.finalFrameForViewController(toViewController)
+        let fromViewController = context.viewController(forKey: UITransitionContextViewControllerKey.from)!
+        let toViewController = context.viewController(forKey: UITransitionContextViewControllerKey.to)!
+        let toViewFinalFrame = context.finalFrame(for: toViewController)
         
         // Shift to the right
-        toView.frame = CGRectOffset(toViewFinalFrame, toViewFinalFrame.width, 0)
+        toView.frame = toViewFinalFrame.offsetBy(dx: toViewFinalFrame.width, dy: 0)
         
         let fromViewFinalFrame: CGRect = {
-            let initialFrame = context.initialFrameForViewController(fromViewController)
-            return CGRectOffset(initialFrame, -(initialFrame.width * 0.3), 0)
+            let initialFrame = context.initialFrame(for: fromViewController)
+            return initialFrame.offsetBy(dx: -(initialFrame.width * 0.3), dy: 0)
         }()
         
         addShadows([toView])
         
         
-        UIView.animateWithDuration(duration, delay: 0.0, options: options, animations: { () -> Void in
+        UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: { () -> Void in
             
             toView.frame = toViewFinalFrame
             fromView.frame = fromViewFinalFrame
@@ -179,7 +179,7 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
             }, completion: { (completed) -> Void in
 
                 // Inform about transaction completion state
-                context.completeTransition(!context.transitionWasCancelled())
+                context.completeTransition(!context.transitionWasCancelled)
         })
     }
 }

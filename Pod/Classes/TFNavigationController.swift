@@ -9,47 +9,47 @@
 import UIKit
 
 @objc public enum TFNavigationBarStyle: Int {
-    case Transparent, Solid
+    case transparent, solid
 }
 
 @objc public protocol TFTransparentNavigationBarProtocol {
     func navigationControllerBarPushStyle() -> TFNavigationBarStyle
 }
 
-public class TFNavigationController: UINavigationController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, UINavigationBarDelegate {
+open class TFNavigationController: UINavigationController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, UINavigationBarDelegate {
     
     /// Use this property to disable swipe to pop
-    public private(set) weak var edgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer?
+    open fileprivate(set) weak var edgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer?
     
-    private var interactionController: UIPercentDrivenInteractiveTransition?
-    private var temporaryBackgroundImage: UIImage?
+    fileprivate var interactionController: UIPercentDrivenInteractiveTransition?
+    fileprivate var temporaryBackgroundImage: UIImage?
     var navigationBarSnapshots: Dictionary<Int, UIView> = Dictionary()
     
     
-    func createNavigationBarSnapshot(fromViewController: UIViewController) {
+    func createNavigationBarSnapshot(_ fromViewController: UIViewController) {
         
-        let navbarSnapshot = self.navigationBar.resizableSnapshotViewFromRect(self.navigationBar.bounds.additiveRect(20, direction: .Top), afterScreenUpdates: false, withCapInsets: UIEdgeInsetsMake(0, 0, 0, 0))
+        let navbarSnapshot = self.navigationBar.resizableSnapshotView(from: self.navigationBar.bounds.additiveRect(20, direction: .top), afterScreenUpdates: false, withCapInsets: UIEdgeInsetsMake(0, 0, 0, 0))
         
         // Save snapshot of navigation bar for pop animation
-        if let index = self.viewControllers.indexOf(fromViewController) {
+        if let index = self.viewControllers.index(of: fromViewController) {
             self.navigationBarSnapshots[index] = navbarSnapshot
         }
     }
     
-    public override var viewControllers: [UIViewController] {
+    open override var viewControllers: [UIViewController] {
         didSet {
             // Because delegate is not being called when navigation stack changes
             viewControllers.last.flatMap {
-                delegate?.navigationController?(self, willShowViewController: $0, animated: false)
+                delegate?.navigationController?(self, willShow: $0, animated: false)
             }
         }
     }
     
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationBar.translucent = false
+        self.navigationBar.isTranslucent = false
         self.navigationBar.shadowImage = UIImage()
 
         transitioningDelegate = self   // for presenting the original navigation controller
@@ -57,34 +57,34 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
         //interactivePopGestureRecognizer?.delegate = nil
         
         let recognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(TFNavigationController.handleSwipeFromLeft(_:)))
-        recognizer.edges = .Left
+        recognizer.edges = .left
         self.view.addGestureRecognizer(recognizer)
         edgePanGestureRecognizer = recognizer
         
     }
     
-    func handleSwipeFromLeft(gesture: UIScreenEdgePanGestureRecognizer) {
+    func handleSwipeFromLeft(_ gesture: UIScreenEdgePanGestureRecognizer) {
         
-        let location = gesture.translationInView(gesture.view!)
+        let location = gesture.translation(in: gesture.view!)
         let width = gesture.view!.bounds.size.width
         
         let ratio = location.x / width
         
-        if gesture.state == .Began {
+        if gesture.state == .began {
             interactionController = UIPercentDrivenInteractiveTransition()
             
             if viewControllers.count > 1 {
-                popViewControllerAnimated(true)
+                popViewController(animated: true)
             }
             
-        } else if gesture.state == .Changed {
-            interactionController?.updateInteractiveTransition(ratio)
-        } else if gesture.state == .Ended || gesture.state == .Cancelled || gesture.state == .Failed {
+        } else if gesture.state == .changed {
+            interactionController?.update(ratio)
+        } else if gesture.state == .ended || gesture.state == .cancelled || gesture.state == .failed {
             
             if ratio > 0.5 {
-                interactionController?.finishInteractiveTransition()
+                interactionController?.finish()
             } else {
-                interactionController?.cancelInteractiveTransition()
+                interactionController?.cancel()
             }
             interactionController = nil
         }
@@ -93,7 +93,7 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
     
     // MARK: - UIViewControllerTransitioningDelegate
 
-    public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         guard self != presented else {
             return nil
@@ -102,7 +102,7 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
         return self.forwardAnimator(source, toViewController: presented)
     }
     
-    public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         guard self != dismissed && viewControllers.count > 1 else {
             return nil
@@ -114,54 +114,53 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
         return self.backwardAnimator(dismissed, toViewController: previousController)
     }
     
-    public func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    open func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactionController
     }
     
-    public func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    open func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactionController
     }
     
     // MARK: - UINavigationControllerDelegate
     
-    public func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+    open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         
         // Make sure all view controllers that are presented by this navigation controller
         // have this set to false to prevent layout issues and blinking causes by wrong scroll insets
         viewController.automaticallyAdjustsScrollViewInsets = false
         
         // Support transparent navigation bar for the root view controller
-        if let topViewController = topViewController as? TFTransparentNavigationBarProtocol
-            where topViewController.navigationControllerBarPushStyle() == .Transparent {
+        if let topViewController = topViewController as? TFTransparentNavigationBarProtocol, topViewController.navigationControllerBarPushStyle() == .transparent {
             setupNavigationBarByStyle(.toTransparent)
         }
     }
     
-    public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        if operation == .Push {
+        if operation == .push {
             return self.forwardAnimator(fromVC, toViewController: toVC)
-        } else if operation == .Pop {
+        } else if operation == .pop {
             return self.backwardAnimator(fromVC, toViewController: toVC)
         }
         return nil
     }
     
-    public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    open func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactionController
     }
     
     // MARK: - Helpers
     
-    func forwardAnimator(fromViewController: UIViewController, toViewController: UIViewController) -> TFForwardAnimator? {
+    func forwardAnimator(_ fromViewController: UIViewController, toViewController: UIViewController) -> TFForwardAnimator? {
     
-        var fromStyle: TFNavigationBarStyle = TFNavigationBarStyle.Solid
+        var fromStyle: TFNavigationBarStyle = TFNavigationBarStyle.solid
         
         if let source = fromViewController as? TFTransparentNavigationBarProtocol {
             fromStyle = source.navigationControllerBarPushStyle()
         }
         
-        var toStyle: TFNavigationBarStyle = TFNavigationBarStyle.Solid
+        var toStyle: TFNavigationBarStyle = TFNavigationBarStyle.solid
         
         if let presented = toViewController as? TFTransparentNavigationBarProtocol {
             toStyle = presented.navigationControllerBarPushStyle()
@@ -171,24 +170,24 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
         
         if fromStyle == toStyle {
             styleTransition = .toSame
-        } else if fromStyle == .Transparent && toStyle == .Solid {
+        } else if fromStyle == .transparent && toStyle == .solid {
             styleTransition = .toSolid
-        } else if fromStyle == .Solid && toStyle == .Transparent {
+        } else if fromStyle == .solid && toStyle == .transparent {
             styleTransition = .toTransparent
         }
         
         return TFForwardAnimator(navigationController: self, navigationBarStyleTransition: styleTransition, isInteractive: interactionController != nil)
     }
     
-    func backwardAnimator(fromViewController: UIViewController, toViewController: UIViewController) -> TFBackwardAnimator? {
+    func backwardAnimator(_ fromViewController: UIViewController, toViewController: UIViewController) -> TFBackwardAnimator? {
         
-        var fromStyle: TFNavigationBarStyle = TFNavigationBarStyle.Solid
+        var fromStyle: TFNavigationBarStyle = TFNavigationBarStyle.solid
         
         if let fromViewController = fromViewController as? TFTransparentNavigationBarProtocol {
             fromStyle = fromViewController.navigationControllerBarPushStyle()
         }
         
-        var toStyle: TFNavigationBarStyle = TFNavigationBarStyle.Solid
+        var toStyle: TFNavigationBarStyle = TFNavigationBarStyle.solid
         
         if let toViewController = toViewController as? TFTransparentNavigationBarProtocol {
             toStyle = toViewController.navigationControllerBarPushStyle()
@@ -197,9 +196,9 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
         
         if fromStyle == toStyle {
             styleTransition = .toSame
-        } else if fromStyle == .Solid && toStyle == .Transparent {
+        } else if fromStyle == .solid && toStyle == .transparent {
             styleTransition = .toTransparent
-        } else if fromStyle == .Transparent && toStyle == .Solid {
+        } else if fromStyle == .transparent && toStyle == .solid {
             styleTransition = .toSolid
         }
         
@@ -207,19 +206,19 @@ public class TFNavigationController: UINavigationController, UIViewControllerTra
     }
     
     
-    func setupNavigationBarByStyle(transitionStyle: TFNavigationBarStyleTransition) {
+    func setupNavigationBarByStyle(_ transitionStyle: TFNavigationBarStyleTransition) {
         
         if (transitionStyle == .toTransparent) {
             // set navbar to translucent
-            self.navigationBar.translucent = true
+            self.navigationBar.isTranslucent = true
             // and make it transparent
-            self.temporaryBackgroundImage = self.navigationBar.backgroundImageForBarMetrics(.Default)
-            self.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+            self.temporaryBackgroundImage = self.navigationBar.backgroundImage(for: .default)
+            self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
             
         } else if (transitionStyle == .toSolid) {
             
-            self.navigationBar.translucent = false
-            self.navigationBar.setBackgroundImage(temporaryBackgroundImage, forBarMetrics: UIBarMetrics.Default)
+            self.navigationBar.isTranslucent = false
+            self.navigationBar.setBackgroundImage(temporaryBackgroundImage, for: UIBarMetrics.default)
         }
     }
     
