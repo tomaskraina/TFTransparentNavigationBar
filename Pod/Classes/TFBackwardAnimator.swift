@@ -102,6 +102,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         let navigationControllerFrame = navigationController.view.frame
         var toViewFinalFrame: CGRect = CGRectOffset(fromFrame, -(fromFrame.width * 0.3), 0)
         var fromViewFinalFrame: CGRect = CGRectOffset(fromView.frame, fromView.frame.width, 0)
+        var fromViewSnapshotFinalFrame: CGRect = fromViewFinalFrame
         var toFrame: CGRect = fromFrame
         
         if fromViewController.hidesBottomBarWhenPushed && navigationController.viewControllers.filter({ $0.hidesBottomBarWhenPushed }).count == 0 {
@@ -124,15 +125,12 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
             toViewFinalFrame = toFrame
             toViewFinalFrame.size.height -= shift
             toViewFinalFrame.origin.y += shift
-            // Final frame for fromView and fromViewSnapshot
-            fromViewFinalFrame = CGRectOffset(fromView.frame, fromView.frame.width, 0)
             
         } else if (self.navigationBarStyleTransition == .toTransparent) {
             // Set move toView to the left about 30% of its width
             toView.frame = CGRectOffset(navigationControllerFrame, -(navigationControllerFrame.width * 0.3), 0)
             toViewFinalFrame = navigationControllerFrame
-            // Final frame for fromView and fromViewSnapshot
-            fromViewFinalFrame = CGRectOffset(navigationControllerFrame, navigationControllerFrame.width, 0)
+            fromViewSnapshotFinalFrame = CGRectOffset(navigationControllerFrame, navigationControllerFrame.width, 0)
         }
         
         // Save origin navigation bar frame
@@ -157,7 +155,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         UIView.animateWithDuration(duration, delay: 0.0, options: options, animations: { () -> Void in
             
             fromView.frame = fromViewFinalFrame
-            fromViewSnapshot.frame = fromViewFinalFrame
+            fromViewSnapshot.frame = fromViewSnapshotFinalFrame
             toView.frame = toViewFinalFrame
             toViewControllerNavigationBarSnapshot?.frame = snapshotframe
             
