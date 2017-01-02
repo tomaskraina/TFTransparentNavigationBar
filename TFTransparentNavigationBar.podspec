@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "TFTransparentNavigationBar"
-  s.version          = "0.4.5"
+  s.version          = "0.4.6"
   s.summary          = "Custom transition between controllers in UINavigationController that makes navigation bar transparent on specified controllers."
 
 # This description is used to generate tags and improve search results.
