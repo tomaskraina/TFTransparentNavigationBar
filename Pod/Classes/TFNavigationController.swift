@@ -21,12 +21,18 @@ open class TFNavigationController: UINavigationController, UIViewControllerTrans
     /// Use this property to disable swipe to pop
     open fileprivate(set) weak var edgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer?
     
+    var isTransitionInteractive: Bool {
+        get {
+            return interactionController != nil
+        }
+    }
+    
     fileprivate var interactionController: UIPercentDrivenInteractiveTransition?
     fileprivate var temporaryBackgroundImage: UIImage?
     var navigationBarSnapshots: Dictionary<Int, UIView> = Dictionary()
     
     
-    func createNavigationBarSnapshot(_ fromViewController: UIViewController) {
+    open func createNavigationBarSnapshot(_ fromViewController: UIViewController) {
         
         let navbarSnapshot = self.navigationBar.resizableSnapshotView(from: self.navigationBar.bounds.additiveRect(20, direction: .top), afterScreenUpdates: false, withCapInsets: UIEdgeInsetsMake(0, 0, 0, 0))
         
