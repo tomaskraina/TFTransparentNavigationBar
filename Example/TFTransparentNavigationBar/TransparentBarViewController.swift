@@ -23,17 +23,17 @@ class TransparentBarViewController: UIViewController, TFTransparentNavigationBar
         
         setUpFading(viewFadingBehaviour, forTableView: tableView)
         
-        print(self.navigationController?.navigationBar.frame)
+        print(self.navigationController?.navigationBar.frame ?? "nil")
 
     }
 
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
     
@@ -46,7 +46,7 @@ class TransparentBarViewController: UIViewController, TFTransparentNavigationBar
     // MARK: - TFTransparentNavigationBarProtocol
     
     func navigationControllerBarPushStyle() -> TFNavigationBarStyle {
-        return .Transparent
+        return .transparent
     }
     
     /*
@@ -59,13 +59,13 @@ class TransparentBarViewController: UIViewController, TFTransparentNavigationBar
     }
     */
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 25
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         return cell
     }

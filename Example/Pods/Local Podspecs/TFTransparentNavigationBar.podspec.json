@@ -1,16 +1,17 @@
 {
   "name": "TFTransparentNavigationBar",
-  "version": "0.1.0",
-  "summary": "A short description of TFTransparentNavigationBar.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/TFTransparentNavigationBar",
+  "version": "0.5.0",
+  "summary": "Custom transition between controllers in UINavigationController that makes navigation bar transparent on specified controllers.",
+  "description": "Custom transition between controllers in UINavigationController that makes navigation bar transparent on specified controllers. It solves problem with making navigation bar translucent on one controller and non-translucent on another and vice versa.",
+  "homepage": "https://github.com/thefuntasty/TFTransparentNavigationBar",
   "license": "MIT",
   "authors": {
-    "Ales Kocur": "ales@thefuntasty.com"
+    "Ales Kocur": "ales@thefuntasty.com",
+    "Tom Kraina": "me@tomkraina.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/TFTransparentNavigationBar.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/thefuntasty/TFTransparentNavigationBar.git",
+    "tag": "0.5.0"
   },
   "platforms": {
     "ios": "8.0"

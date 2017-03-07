@@ -16,7 +16,7 @@ extension UIViewController {
             
             let backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: navBarFrame.width, height: navBarFrame.maxY))
             
-            backgroundView.backgroundColor = navigationController?.navigationBar.barTintColor ?? UIColor.whiteColor()
+            backgroundView.backgroundColor = navigationController?.navigationBar.barTintColor ?? UIColor.white
             backgroundView.alpha = 0.0
             backgroundView.clipsToBounds = false
             
@@ -46,7 +46,7 @@ extension UIViewController {
         return nil
     }
     
-    func setUpFading(viewFadingBehaviour: ViewFadingBehaviour, forTableView tableView: UITableView?) {
+    func setUpFading(_ viewFadingBehaviour: ViewFadingBehaviour, forTableView tableView: UITableView?) {
         if let viewToFade = addNavigationBarBackground() {
             viewFadingBehaviour.viewToFadeIn = viewToFade
             viewFadingBehaviour.scrollViewToObserve = tableView

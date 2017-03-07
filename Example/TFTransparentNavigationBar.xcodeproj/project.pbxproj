@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21D27BE22C506BF483E725C1 /* Pods_TFTransparentNavigationBar_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7C4A7339D0240CF88CF366 /* Pods_TFTransparentNavigationBar_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		61323A51952319A6F828ABC3 /* Pods_TFTransparentNavigationBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1BBA3BAA2DBCF6BEF46261 /* Pods_TFTransparentNavigationBar_Example.framework */; };
 		90CEB0F61BC014130065CBEB /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90CEB0F51BC014130065CBEB /* beach.jpg */; };
 		90CEB0F81BC0151E0065CBEB /* TransparentBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CEB0F71BC0151E0065CBEB /* TransparentBarViewController.swift */; };
 		9C81AACE1D50E19F0036BE82 /* FadingViewBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AACD1D50E1740036BE82 /* FadingViewBehaviour.swift */; };
 		9C81AAD01D50E1B20036BE82 /* UIViewController+NavigationBarBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AACF1D50E1B20036BE82 /* UIViewController+NavigationBarBackground.swift */; };
-		A9FAB755CE5527B81C8EA59A /* Pods_TFTransparentNavigationBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CFDF00DE9F96491736C744 /* Pods_TFTransparentNavigationBar_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EB5098668AFA0D0C7D679C92 /* Pods_TFTransparentNavigationBar_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B413E053CC40E224DCFE6D31 /* Pods_TFTransparentNavigationBar_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,10 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04F594778B3EAF48EC3D9ACA /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTransparentNavigationBar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFTransparentNavigationBar_Tests/Pods-TFTransparentNavigationBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		12AA506892AFD4D9A04F77E8 /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTransparentNavigationBar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFTransparentNavigationBar_Tests/Pods-TFTransparentNavigationBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B3465E1741B192DB718C18E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		43A7F04DAC6564C289576FF8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		484B4509DEF27998B4BFCBD3 /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTransparentNavigationBar_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFTransparentNavigationBar_Example/Pods-TFTransparentNavigationBar_Example.release.xcconfig"; sourceTree = "<group>"; };
+		4F1BBA3BAA2DBCF6BEF46261 /* Pods_TFTransparentNavigationBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFTransparentNavigationBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B410E86C3B917D3390E5C3 /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTransparentNavigationBar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFTransparentNavigationBar_Tests/Pods-TFTransparentNavigationBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TFTransparentNavigationBar_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFTransparentNavigationBar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,14 +45,13 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* TFTransparentNavigationBar_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFTransparentNavigationBar_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D7C4A7339D0240CF88CF366 /* Pods_TFTransparentNavigationBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFTransparentNavigationBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90CEB0F51BC014130065CBEB /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
 		90CEB0F71BC0151E0065CBEB /* TransparentBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentBarViewController.swift; sourceTree = "<group>"; };
 		9C81AACD1D50E1740036BE82 /* FadingViewBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingViewBehaviour.swift; sourceTree = "<group>"; };
 		9C81AACF1D50E1B20036BE82 /* UIViewController+NavigationBarBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBarBackground.swift"; sourceTree = "<group>"; };
-		E0238FD55CDE136FB410D87A /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTransparentNavigationBar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFTransparentNavigationBar_Tests/Pods-TFTransparentNavigationBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F3CFDF00DE9F96491736C744 /* Pods_TFTransparentNavigationBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFTransparentNavigationBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F57585FEB8B92C7C866E930F /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTransparentNavigationBar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFTransparentNavigationBar_Example/Pods-TFTransparentNavigationBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A7F7BB7AA9A89D409E4C4A2D /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTransparentNavigationBar_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFTransparentNavigationBar_Example/Pods-TFTransparentNavigationBar_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B3C5A2B106D5DA7488328DC1 /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTransparentNavigationBar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFTransparentNavigationBar_Example/Pods-TFTransparentNavigationBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B413E053CC40E224DCFE6D31 /* Pods_TFTransparentNavigationBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFTransparentNavigationBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9EE18D5D85182E4EB01987C /* TFTransparentNavigationBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TFTransparentNavigationBar.podspec; path = ../TFTransparentNavigationBar.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9FAB755CE5527B81C8EA59A /* Pods_TFTransparentNavigationBar_Example.framework in Frameworks */,
+				61323A51952319A6F828ABC3 /* Pods_TFTransparentNavigationBar_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,20 +68,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21D27BE22C506BF483E725C1 /* Pods_TFTransparentNavigationBar_Tests.framework in Frameworks */,
+				EB5098668AFA0D0C7D679C92 /* Pods_TFTransparentNavigationBar_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3CDDA3A37C3E9CB6CA4F545A /* Frameworks */ = {
+		1030DAE383F9DE7B6D57DEFF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F3CFDF00DE9F96491736C744 /* Pods_TFTransparentNavigationBar_Example.framework */,
-				7D7C4A7339D0240CF88CF366 /* Pods_TFTransparentNavigationBar_Tests.framework */,
+				B3C5A2B106D5DA7488328DC1 /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */,
+				A7F7BB7AA9A89D409E4C4A2D /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */,
+				12AA506892AFD4D9A04F77E8 /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */,
+				55B410E86C3B917D3390E5C3 /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -91,8 +93,8 @@
 				607FACD21AFB9204008FA782 /* Example for TFTransparentNavigationBar */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				9DDF18CD7117AB3AFA033AA1 /* Pods */,
-				3CDDA3A37C3E9CB6CA4F545A /* Frameworks */,
+				1030DAE383F9DE7B6D57DEFF /* Pods */,
+				D6C4115364C115237D0B96F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,15 +159,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		9DDF18CD7117AB3AFA033AA1 /* Pods */ = {
+		D6C4115364C115237D0B96F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F57585FEB8B92C7C866E930F /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */,
-				484B4509DEF27998B4BFCBD3 /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */,
-				04F594778B3EAF48EC3D9ACA /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */,
-				E0238FD55CDE136FB410D87A /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */,
+				4F1BBA3BAA2DBCF6BEF46261 /* Pods_TFTransparentNavigationBar_Example.framework */,
+				B413E053CC40E224DCFE6D31 /* Pods_TFTransparentNavigationBar_Tests.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,12 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TFTransparentNavigationBar_Example" */;
 			buildPhases = (
-				B57B40950D1A4CD9F9CB81D6 /* Check Pods Manifest.lock */,
+				7ED0191E4AFCF41C437A1080 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				EF0B28F38CCA523EA413EB83 /* Embed Pods Frameworks */,
-				99E9DE267075F7938166FADE /* Copy Pods Resources */,
+				4BCE36514959CA19295A34CA /* [CP] Embed Pods Frameworks */,
+				BB0B0CE6C01A4A526C33D25E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,12 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TFTransparentNavigationBar_Tests" */;
 			buildPhases = (
-				8BCC804016D5746B3A71AFEB /* Check Pods Manifest.lock */,
+				74CC1DE4975C6251D96D5098 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				CF70ADA4842FFF66CFD77ED0 /* Embed Pods Frameworks */,
-				DF6CF353A00634649321E2B1 /* Copy Pods Resources */,
+				0D78B39A1AD7B5FF6B1A475F /* [CP] Embed Pods Frameworks */,
+				C6FE1A540573A9AEE49E82C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,16 +219,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -274,59 +275,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8BCC804016D5746B3A71AFEB /* Check Pods Manifest.lock */ = {
+		0D78B39A1AD7B5FF6B1A475F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		99E9DE267075F7938166FADE /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFTransparentNavigationBar_Example/Pods-TFTransparentNavigationBar_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B57B40950D1A4CD9F9CB81D6 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CF70ADA4842FFF66CFD77ED0 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,34 +290,79 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFTransparentNavigationBar_Tests/Pods-TFTransparentNavigationBar_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DF6CF353A00634649321E2B1 /* Copy Pods Resources */ = {
+		4BCE36514959CA19295A34CA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFTransparentNavigationBar_Tests/Pods-TFTransparentNavigationBar_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF0B28F38CCA523EA413EB83 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFTransparentNavigationBar_Example/Pods-TFTransparentNavigationBar_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74CC1DE4975C6251D96D5098 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7ED0191E4AFCF41C437A1080 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BB0B0CE6C01A4A526C33D25E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFTransparentNavigationBar_Example/Pods-TFTransparentNavigationBar_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6FE1A540573A9AEE49E82C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFTransparentNavigationBar_Tests/Pods-TFTransparentNavigationBar_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -429,8 +430,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -474,8 +477,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -494,41 +499,44 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F57585FEB8B92C7C866E930F /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */;
+			baseConfigurationReference = B3C5A2B106D5DA7488328DC1 /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TFTransparentNavigationBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 484B4509DEF27998B4BFCBD3 /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */;
+			baseConfigurationReference = A7F7BB7AA9A89D409E4C4A2D /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TFTransparentNavigationBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04F594778B3EAF48EC3D9ACA /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */;
+			baseConfigurationReference = 12AA506892AFD4D9A04F77E8 /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -543,14 +551,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFTransparentNavigationBar_Example.app/TFTransparentNavigationBar_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0238FD55CDE136FB410D87A /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */;
+			baseConfigurationReference = 55B410E86C3B917D3390E5C3 /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -561,7 +569,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFTransparentNavigationBar_Example.app/TFTransparentNavigationBar_Example";
 			};
 			name = Release;

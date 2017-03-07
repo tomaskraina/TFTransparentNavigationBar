@@ -15,10 +15,10 @@ class ViewFadingBehaviour: NSObject {
     @IBOutlet weak var scrollViewToObserve: UIScrollView! {
         didSet {
             if let view = oldValue {
-                stopObserving(view)
+                stopObserving(view: view)
             }
             if let view = scrollViewToObserve {
-                startObserving(view)
+                startObserving(view: view)
             }
         }
     }
@@ -31,27 +31,27 @@ class ViewFadingBehaviour: NSObject {
     
     deinit {
         if let view = scrollViewToObserve {
-            stopObserving(view)
+            stopObserving(view: view)
         }
     }
     
     // MARK: - KVO
     
-    let keyPath = Selector("contentOffset")
+    let keyPath = #selector(getter: UIScrollView.contentOffset)
     
     func startObserving(view: UIView) {
-        view.addObserver(self, forKeyPath: String(keyPath), options: .New, context: &myContext)
+        view.addObserver(self, forKeyPath: String(describing: keyPath), options: .new, context: &myContext)
     }
     
     func stopObserving(view: UIView) {
-        view.removeObserver(self, forKeyPath: String(keyPath))
+        view.removeObserver(self, forKeyPath: String(describing: keyPath))
     }
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
-        if context == &myContext && keyPath == String(self.keyPath) && object === scrollViewToObserve {
+        if context == &myContext && keyPath == String(describing: self.keyPath) && object as AnyObject === scrollViewToObserve {
             
-            guard let contentOffset = change?[NSKeyValueChangeNewKey]?.CGPointValue() else {
+            guard let contentOffset = (change?[NSKeyValueChangeKey.newKey] as AnyObject).cgPointValue else {
                 return
             }
             
@@ -66,7 +66,7 @@ class ViewFadingBehaviour: NSObject {
     
     // MARK: - Helper methods
     
-    private func fadeView(view: UIView, contentOffset: CGPoint, minY: CGFloat, maxY: CGFloat) {
+    fileprivate func fadeView(_ view: UIView, contentOffset: CGPoint, minY: CGFloat, maxY: CGFloat) {
         
         let y = contentOffset.y
         let range = max(minY, maxY) - min(minY, maxY)
