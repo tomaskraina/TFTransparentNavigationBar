@@ -83,9 +83,12 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         toView.isUserInteractionEnabled = false
         
         // Create snapshot from navigation controller content
-        let fromViewSnapshot = fromViewController.navigationController!.view.snapshotView(afterScreenUpdates: false)!
+        // It's because we want the animate the whole content including transparent navbar, not just the child VC's content
+        guard let fromViewSnapshot = navigationController.view.snapshotView(afterScreenUpdates: false) else {
+            fatalError("Can't create a snapshot of view=\(navigationController.view)")
+        }
         
-        self.navigationController.setupNavigationBarByStyle(self.navigationBarStyleTransition)
+        navigationController.setupNavigationBarByStyle(self.navigationBarStyleTransition)
         
         fromView.isHidden = true
 
@@ -102,7 +105,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         let navigationControllerFrame = navigationController.view.frame
         var toViewFinalFrame: CGRect = fromFrame.offsetBy(dx: -(fromFrame.width * 0.3), dy: 0)
         var fromViewFinalFrame: CGRect = fromView.frame.offsetBy(dx: fromView.frame.width, dy: 0)
-        var fromViewSnapshotFinalFrame: CGRect = fromViewFinalFrame
+        var fromViewSnapshotFinalFrame: CGRect = fromViewSnapshot.frame.offsetBy(dx: fromViewSnapshot.frame.width, dy: 0)
         var toFrame: CGRect = fromFrame
         
         if fromViewController.hidesBottomBarWhenPushed && navigationController.viewControllers.filter({ $0.hidesBottomBarWhenPushed }).count == 0 {
