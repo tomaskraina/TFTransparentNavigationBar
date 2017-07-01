@@ -19,7 +19,13 @@ import UIKit
 open class TFNavigationController: UINavigationController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, UINavigationBarDelegate {
     
     /// Use this property to disable swipe to pop
-    open fileprivate(set) weak var edgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer?
+    open fileprivate(set) weak var edgePanGestureRecognizer: UIPanGestureRecognizer?
+    
+    public var isFullScreenSwipeEnabled: Bool = true {
+        didSet {
+            addPanGestureRecognizer()
+        }
+    }
     
     fileprivate var interactionController: UIPercentDrivenInteractiveTransition?
     fileprivate var temporaryBackgroundImage: UIImage?
@@ -51,17 +57,34 @@ open class TFNavigationController: UINavigationController, UIViewControllerTrans
         
         self.navigationBar.isTranslucent = false
         self.navigationBar.shadowImage = UIImage()
-
+        
         transitioningDelegate = self   // for presenting the original navigation controller
         delegate = self                // for navigation controller custom transitions
         //interactivePopGestureRecognizer?.delegate = nil
         
-        let recognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(TFNavigationController.handleSwipeFromLeft(_:)))
-        recognizer.edges = .left
-        self.view.addGestureRecognizer(recognizer)
-        edgePanGestureRecognizer = recognizer
-        
+        addPanGestureRecognizer()
     }
+    
+    
+    func addPanGestureRecognizer() {
+        
+        let recognizer: UIPanGestureRecognizer
+        if isFullScreenSwipeEnabled {
+            recognizer = UIPanGestureRecognizer(target: self, action: #selector(TFNavigationController.handleSwipeFromLeft(_:)))
+        } else {
+            let edgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(TFNavigationController.handleSwipeFromLeft(_:)))
+            edgeRecognizer.edges = .left
+            recognizer = edgeRecognizer
+        }
+        
+        if let oldRecognizer = edgePanGestureRecognizer {
+            view.removeGestureRecognizer(oldRecognizer)
+        }
+        
+        view.addGestureRecognizer(recognizer)
+        edgePanGestureRecognizer = recognizer
+    }
+    
     
     func handleSwipeFromLeft(_ gesture: UIScreenEdgePanGestureRecognizer) {
         
@@ -92,7 +115,7 @@ open class TFNavigationController: UINavigationController, UIViewControllerTrans
     
     
     // MARK: - UIViewControllerTransitioningDelegate
-
+    
     open func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         guard self != presented else {
@@ -153,7 +176,7 @@ open class TFNavigationController: UINavigationController, UIViewControllerTrans
     // MARK: - Helpers
     
     func forwardAnimator(_ fromViewController: UIViewController, toViewController: UIViewController) -> TFForwardAnimator? {
-    
+        
         var fromStyle: TFNavigationBarStyle = TFNavigationBarStyle.solid
         
         if let source = fromViewController as? TFTransparentNavigationBarProtocol {
@@ -223,4 +246,3 @@ open class TFNavigationController: UINavigationController, UIViewControllerTrans
     }
     
 }
-

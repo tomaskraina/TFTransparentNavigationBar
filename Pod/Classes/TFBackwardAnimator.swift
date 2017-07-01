@@ -71,8 +71,8 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         let toView = context.view(forKey: UITransitionContextViewKey.to)!
         let fromView = context.view(forKey: UITransitionContextViewKey.from)!
         let duration = self.transitionDuration(using: context)
-
-        var fromFrame = context.initialFrame(for: fromViewController)
+        
+        let fromFrame = context.initialFrame(for: fromViewController)
         
         var toViewControllerNavigationBarSnapshot: UIView?
         if let index = navigationController.viewControllers.index(of: toViewController), let navigationBarSnapshot = self.navigationController.navigationBarSnapshots[index] {
@@ -104,7 +104,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         
         let navigationControllerFrame = navigationController.view.frame
         var toViewFinalFrame: CGRect = fromFrame.offsetBy(dx: -(fromFrame.width * 0.3), dy: 0)
-        var fromViewFinalFrame: CGRect = fromView.frame.offsetBy(dx: fromView.frame.width, dy: 0)
+        let fromViewFinalFrame: CGRect = fromView.frame.offsetBy(dx: fromView.frame.width, dy: 0)
         var fromViewSnapshotFinalFrame: CGRect = fromViewSnapshot.frame.offsetBy(dx: fromViewSnapshot.frame.width, dy: 0)
         var toFrame: CGRect = fromFrame
         
