@@ -71,7 +71,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         let toView = context.view(forKey: UITransitionContextViewKey.to)!
         let fromView = context.view(forKey: UITransitionContextViewKey.from)!
         let duration = self.transitionDuration(using: context)
-
+        
         let fromFrame = context.initialFrame(for: fromViewController)
         
         var toViewControllerNavigationBarSnapshot: UIView?
@@ -83,17 +83,19 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         toView.isUserInteractionEnabled = false
         
         // Create snapshot from navigation controller content
-        let fromViewSnapshot = fromViewController.navigationController!.view.snapshotView(afterScreenUpdates: false)!
+        let fromViewSnapshot = navigationController.view.snapshotView(afterScreenUpdates: false)
         
         self.navigationController.setupNavigationBarByStyle(self.navigationBarStyleTransition)
         
         fromView.isHidden = true
-
+        
         // Insert toView below fromView
         containerView.insertSubview(toView, belowSubview: fromView)
         
         // Insert fromView snapshot
-        containerView.insertSubview(fromViewSnapshot, aboveSubview: fromView)
+        if fromViewSnapshot != nil {
+            containerView.insertSubview(fromViewSnapshot!, aboveSubview: fromView)
+        }
         
         if let snapshot = toViewControllerNavigationBarSnapshot {
             containerView.insertSubview(snapshot, aboveSubview: toView)
@@ -143,45 +145,49 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
             // Shift bar
             self.navigationController.navigationBar.frame = navigationBarFrame.offsetBy(dx: -navigationBarFrame.width, dy: 0)
         }
-
+        
         let snapshotframe = navigationBarFrame.additiveRect(20, direction: .top)
         
         toViewControllerNavigationBarSnapshot?.frame = snapshotframe.offsetBy(dx: -(snapshotframe.width * 0.3), dy: 0)
-
+        
         
         // Add shadows
-        addShadows([fromView, fromViewSnapshot])
+        if fromViewSnapshot != nil {
+            addShadows([fromView, fromViewSnapshot!])
+        } else {
+            addShadows([fromView])
+        }
         
         let options: UIViewAnimationOptions = isInteractive ? [.curveLinear] : [.curveEaseOut]
         
         UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: { () -> Void in
             
             fromView.frame = fromViewFinalFrame
-            fromViewSnapshot.frame = fromViewFinalFrame
+            fromViewSnapshot?.frame = fromViewFinalFrame
             toView.frame = toViewFinalFrame
             toViewControllerNavigationBarSnapshot?.frame = snapshotframe
             
             
-            }, completion: { (completed) -> Void in
-                // Re-enable user interaction
-                toView.isUserInteractionEnabled = true
+        }, completion: { (completed) -> Void in
+            // Re-enable user interaction
+            toView.isUserInteractionEnabled = true
+            
+            // Remove snapshots
+            fromViewSnapshot?.removeFromSuperview()
+            toViewControllerNavigationBarSnapshot?.removeFromSuperview()
+            
+            self.navigationController.navigationBar.alpha = 1.0
+            self.navigationController.navigationBar.frame = navigationBarFrame
+            
+            if context.transitionWasCancelled {
+                self.navigationController.setupNavigationBarByStyle(self.navigationBarStyleTransition.reverse())
+                fromView.isHidden = false
                 
-                // Remove snapshots
-                fromViewSnapshot.removeFromSuperview()
-                toViewControllerNavigationBarSnapshot?.removeFromSuperview()
-                
-                self.navigationController.navigationBar.alpha = 1.0
-                self.navigationController.navigationBar.frame = navigationBarFrame
-                
-                if context.transitionWasCancelled {
-                    self.navigationController.setupNavigationBarByStyle(self.navigationBarStyleTransition.reverse())
-                    fromView.isHidden = false
-                    
-                    // fromView.frame needs to be reset to it's original value, otherwise it's size is .zero (iOS 10)
-                    fromView.frame = fromFrame
-                }
-                
-                context.completeTransition(!context.transitionWasCancelled)
+                // fromView.frame needs to be reset to it's original value, otherwise it's size is .zero (iOS 10)
+                fromView.frame = fromFrame
+            }
+            
+            context.completeTransition(!context.transitionWasCancelled)
         })
     }
     
