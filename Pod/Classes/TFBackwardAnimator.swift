@@ -74,6 +74,8 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         
         let fromFrame = context.initialFrame(for: fromViewController)
         
+        toViewController.view.frame = context.finalFrame(for: toViewController)
+        
         var toViewControllerNavigationBarSnapshot: UIView?
         if let index = navigationController.viewControllers.index(of: toViewController), let navigationBarSnapshot = self.navigationController.navigationBarSnapshots[index] {
             toViewControllerNavigationBarSnapshot = navigationBarSnapshot
@@ -118,7 +120,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
             // Set move toView to the left about 30% of its width
             var shiftedFrame = toFrame.offsetBy(dx: -(toFrame.width * 0.3), dy: 0)
             
-            let shift: CGFloat = 64 // 0 or make sure automaticallyAdjustScrollViewInsets is off
+            let shift: CGFloat = isIphoneX() ? 88 : 64 // 0 or make sure automaticallyAdjustScrollViewInsets is off
             shiftedFrame.size.height -= shift
             shiftedFrame.origin.y += shift
             toView.frame = shiftedFrame
@@ -150,6 +152,19 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         
         toViewControllerNavigationBarSnapshot?.frame = snapshotframe.offsetBy(dx: -(snapshotframe.width * 0.3), dy: 0)
         
+        var notchMaskView: UIView?
+        
+        if let navSnapshot = toViewControllerNavigationBarSnapshot {
+            navSnapshot.frame.origin.x = 0 // Correct in case it has been moved
+            if isIphoneX() {
+                navSnapshot.frame.origin.y = 24
+                notchMaskView = UIView(frame: CGRect(x: 0, y: 0, width: navSnapshot.frame.width, height: 24))
+                notchMaskView?.backgroundColor = UIColor.white
+                containerView.insertSubview(notchMaskView!, aboveSubview: toView)
+            }
+            containerView.insertSubview(navSnapshot, aboveSubview: toView)
+        }
+        
         
         // Add shadows
         if fromViewSnapshot != nil {
@@ -175,6 +190,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
             // Remove snapshots
             fromViewSnapshot?.removeFromSuperview()
             toViewControllerNavigationBarSnapshot?.removeFromSuperview()
+            notchMaskView?.removeFromSuperview()
             
             self.navigationController.navigationBar.alpha = 1.0
             self.navigationController.navigationBar.frame = navigationBarFrame
@@ -198,5 +214,9 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         // a tab bar controller (parent of the navigation controler) shrinks its content view
         // after the transition is completed. Calling `setNeedsLayout` fixes it.
         navigationController.tabBarController?.view.setNeedsLayout()
+    }
+    
+    func isIphoneX() -> Bool {
+        return UIScreen.main.bounds.size.height == 812
     }
 }
