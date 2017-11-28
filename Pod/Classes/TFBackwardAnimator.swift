@@ -159,7 +159,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
             if isIphoneX() {
                 navSnapshot.frame.origin.y = 24
                 notchMaskView = UIView(frame: CGRect(x: 0, y: 0, width: navSnapshot.frame.width, height: 24))
-                notchMaskView?.backgroundColor = UIColor.white
+                notchMaskView?.backgroundColor = navigationBarStyleTransition == .toSolid ? UIColor.white : UIColor.clear
                 containerView.insertSubview(notchMaskView!, aboveSubview: toView)
             }
             containerView.insertSubview(navSnapshot, aboveSubview: toView)
