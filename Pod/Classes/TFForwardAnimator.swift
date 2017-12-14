@@ -25,6 +25,13 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         // Insert toView above from view
         containerView.insertSubview(toView, aboveSubview: fromView)
         
+        // HAX: https://stackoverflow.com/a/45578760/1161723
+        if #available(iOS 11.0, *) {
+            if let scrollView = toView.subviews.first as? UIScrollView {
+                scrollView.contentInsetAdjustmentBehavior = .never
+            }
+        }
+        
         switch navigationBarStyleTransition {
         case .toTransparent:
             animateToTransparent(containerView: containerView, fromView: fromView, toView: toView, duration: duration, options: options, context: context)
