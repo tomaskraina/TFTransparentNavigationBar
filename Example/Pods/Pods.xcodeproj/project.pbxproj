@@ -7,117 +7,117 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		028E87DB4007BA5BF4E4DC096EA5E9F8 /* Pods-TFTransparentNavigationBar_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 302FF3F45DE48F8C35D826F6328B79E0 /* Pods-TFTransparentNavigationBar_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		262832183BC2E1F7F1DC9B2CA943D56B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		3DD20774EDF12BF4D0EBC2DD3D69229B /* Pods-TFTransparentNavigationBar_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D081DB48638AF1C2C98140DAE27629 /* Pods-TFTransparentNavigationBar_Tests-dummy.m */; };
-		630090AFBD08008CE0229C0532A42A7F /* CGRect+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F252C8EEE9109BE406FB3223368ACD /* CGRect+Tools.swift */; };
-		720BD0FACCBBD8499ABE8374EAAB8A7D /* TFTransparentNavigationBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BBD557A9144327182B5A3AA4018A4A /* TFTransparentNavigationBar-dummy.m */; };
-		81883898846194BE81B5B061F8EBEF1B /* Pods-TFTransparentNavigationBar_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0C1C917C78DEF9993E19F3E35BD9014 /* Pods-TFTransparentNavigationBar_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DC4D6DC6142976B1FD1ABB955CFAB29 /* TFTransparentNavigationBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EA50D0CF4F92B0D8B3797F92FA52117 /* TFTransparentNavigationBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B1556CD2234EDEB7A76C907C3D5E631 /* TFNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D31CF29ECDD5044BC97E0B4DC24CAF /* TFNavigationController.swift */; };
-		9C2AF65518CB7A59B6527A1B025787F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		B78D59A52EAA25F1B2A41E7DDF7AB209 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		BB01050B7FF9BCA923E5AE043E5BCC68 /* TFTransparentNavigationBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CCC5E0A232FD582DA9FF749C97032D15 /* TFTransparentNavigationBar.bundle */; };
-		C6BBF4A20CB06C00B56EE781FCBCC287 /* Pods-TFTransparentNavigationBar_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF55638134008A14D955DABDCB01FF1F /* Pods-TFTransparentNavigationBar_Example-dummy.m */; };
-		C8D8B4BC56C66CC7CA271A4E5CB4CD20 /* TFNavigationBarAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E7254579C31972D6A3F7CF3B2D6B8A /* TFNavigationBarAnimator.swift */; };
-		E38D1280BEAEE93EECED5BA2BA659F15 /* TFForwardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64CD06B05F8E264A3099E2FEE22C65 /* TFForwardAnimator.swift */; };
-		E780A5B86B22D005F5E61D36854C2D00 /* TFBackwardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2E4E17DAEB6CD2D88EE10171885AB /* TFBackwardAnimator.swift */; };
+		1FBB3896E8D5E12A126DFC6B66493B20 /* TFTransparentNavigationBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A25A420BB7D1E5D05AE634286BE2D6B /* TFTransparentNavigationBar-dummy.m */; };
+		3B5CD685F964E9261142EF792AD79D76 /* TFBackwardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A266717DE16F904452BC2933BFF8B93 /* TFBackwardAnimator.swift */; };
+		5D3C9D66AE3FA2B379FCCADD8D86A3D8 /* CGRect+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E20DFA3E39D2EF7199B4806AFA04DF /* CGRect+Tools.swift */; };
+		67B02592C0E772499D4A5B57C41C366A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DE063C34AFA44FF7131CFA1D4B778A /* Foundation.framework */; };
+		7001E01F186C4D98D7FF383796EDD034 /* TFTransparentNavigationBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 313465F48DFC7A2C9F1663E6C35747BD /* TFTransparentNavigationBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		740BD859BF9AF5FB2D7C2B612B92C449 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DE063C34AFA44FF7131CFA1D4B778A /* Foundation.framework */; };
+		8C4B93B23DD57A80C5D9BB926C68206B /* Pods-TFTransparentNavigationBar_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D69868473D4D65B641114F3DCA543544 /* Pods-TFTransparentNavigationBar_Tests-dummy.m */; };
+		8F2F8F9089A6BBB2C62FF0AB541DECD6 /* TFNavigationBarAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDF5371A102A538089DF839D336F11B /* TFNavigationBarAnimator.swift */; };
+		8FD31DEE5F7390EBDD5C9B7ED2590C7D /* Pods-TFTransparentNavigationBar_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD0FF4A5BA4ADD8C63FB3F9E68CB1F6 /* Pods-TFTransparentNavigationBar_Example-dummy.m */; };
+		92E26EFBCCF77EC0B3B838D8A63CC4B7 /* Pods-TFTransparentNavigationBar_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2754E876E3A93BC099461A01AFA15929 /* Pods-TFTransparentNavigationBar_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6C3A7E0F4F68EF89719F2C5EF975AA9 /* TFForwardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D0CE02C5DF6E705743DC4207A5E119 /* TFForwardAnimator.swift */; };
+		D16571599CA5535B8C27DAB2FF7591D9 /* TFNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9050ABB4814F3407C4266113AE55BDC /* TFNavigationController.swift */; };
+		E73EA29BC529550075475CEE607A0FBF /* Pods-TFTransparentNavigationBar_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2455BEB71F34DCB91093FD3E7A5312 /* Pods-TFTransparentNavigationBar_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8461A5968EA98B3CDF8EF1D2E8ACDF0 /* TFTransparentNavigationBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA2031B247E996996D971A6EE21D4532 /* TFTransparentNavigationBar.bundle */; };
+		F9A5184EF0CD0CB555EB5A85267F8A3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DE063C34AFA44FF7131CFA1D4B778A /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		60347DCF31C4FDF2343ECD71ED2CFE6F /* PBXContainerItemProxy */ = {
+		15E631FFBCD3E29C8AA7D51D857BC2D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = ABA7F375180506092A9B5D9C6631718B;
-			remoteInfo = TFTransparentNavigationBar;
-		};
-		DBB966B817E940C1B398CE38BB771FC0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ABA7F375180506092A9B5D9C6631718B;
-			remoteInfo = TFTransparentNavigationBar;
-		};
-		EB78CD25EA55BACDAEFD73C2D1B575C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68F5702B3E0B0CC66095114A72218A27;
+			remoteGlobalIDString = FC9D56F4FAB76E78E8C1EAB3E6F518C9;
 			remoteInfo = "TFTransparentNavigationBar-TFTransparentNavigationBar";
+		};
+		329D1021DD5099F8B88B65E4DF158D40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6F8B267A292DBC0A52AA743C762A4C6;
+			remoteInfo = TFTransparentNavigationBar;
+		};
+		8AE87638EF24AA63931345931EC1E9E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6F8B267A292DBC0A52AA743C762A4C6;
+			remoteInfo = TFTransparentNavigationBar;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05DF21A23C80EFB3CFFF415CFB300112 /* Pods_TFTransparentNavigationBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TFTransparentNavigationBar_Tests.framework; path = "Pods-TFTransparentNavigationBar_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09BBD557A9144327182B5A3AA4018A4A /* TFTransparentNavigationBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TFTransparentNavigationBar-dummy.m"; sourceTree = "<group>"; };
 		0BA23673613FA521034386E0A7C063EF /* Pods-TFTransparentNavigationBar_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFTransparentNavigationBar_Example-resources.sh"; sourceTree = "<group>"; };
-		1AFCC127B2BF0D10B49DC127113A7914 /* TFTransparentNavigationBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TFTransparentNavigationBar.framework; path = TFTransparentNavigationBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FE2E4E17DAEB6CD2D88EE10171885AB /* TFBackwardAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFBackwardAnimator.swift; sourceTree = "<group>"; };
-		302FF3F45DE48F8C35D826F6328B79E0 /* Pods-TFTransparentNavigationBar_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TFTransparentNavigationBar_Example-umbrella.h"; sourceTree = "<group>"; };
-		3EA50D0CF4F92B0D8B3797F92FA52117 /* TFTransparentNavigationBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFTransparentNavigationBar-umbrella.h"; sourceTree = "<group>"; };
-		51F252C8EEE9109BE406FB3223368ACD /* CGRect+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CGRect+Tools.swift"; sourceTree = "<group>"; };
-		5375809EC1CCCAD3E75D18439DE440AA /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTransparentNavigationBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		53FF6FF859F9B54CD13BDE729783D9F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F25103B8B30B3D1ADA64F963BC02C58 /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTransparentNavigationBar_Example.release.xcconfig"; sourceTree = "<group>"; };
+		23D0CE02C5DF6E705743DC4207A5E119 /* TFForwardAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFForwardAnimator.swift; sourceTree = "<group>"; };
+		2754E876E3A93BC099461A01AFA15929 /* Pods-TFTransparentNavigationBar_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TFTransparentNavigationBar_Tests-umbrella.h"; sourceTree = "<group>"; };
+		2C2455BEB71F34DCB91093FD3E7A5312 /* Pods-TFTransparentNavigationBar_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TFTransparentNavigationBar_Example-umbrella.h"; sourceTree = "<group>"; };
+		313465F48DFC7A2C9F1663E6C35747BD /* TFTransparentNavigationBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFTransparentNavigationBar-umbrella.h"; sourceTree = "<group>"; };
+		3A266717DE16F904452BC2933BFF8B93 /* TFBackwardAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFBackwardAnimator.swift; sourceTree = "<group>"; };
+		52C9678144C6202F3B1C1BD3F22FCE92 /* Pods_TFTransparentNavigationBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFTransparentNavigationBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		592AF2DE67A21C0F33DB237A939FF3C5 /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTransparentNavigationBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		624BFF6C25F8325E5FD35A4EF3BADC18 /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTransparentNavigationBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6520FC11D6C6A64A10EC7C20F1D09B70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66D31CF29ECDD5044BC97E0B4DC24CAF /* TFNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFNavigationController.swift; sourceTree = "<group>"; };
 		6896BE821228D01AF840CA8A3BD87E1A /* Pods-TFTransparentNavigationBar_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFTransparentNavigationBar_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		6BA2BB8CF7016E03615A9BDC9E07D57E /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTransparentNavigationBar_Example.release.xcconfig"; sourceTree = "<group>"; };
-		71D081DB48638AF1C2C98140DAE27629 /* Pods-TFTransparentNavigationBar_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFTransparentNavigationBar_Tests-dummy.m"; sourceTree = "<group>"; };
-		760082FB64AE8E194E02D3CB087F4EF3 /* ResourceBundle-TFTransparentNavigationBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TFTransparentNavigationBar-Info.plist"; sourceTree = "<group>"; };
-		77396C1DEC37E2B997347FDDFCEFBD7C /* TFTransparentNavigationBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TFTransparentNavigationBar.xcconfig; sourceTree = "<group>"; };
-		8C12D22BADC13073CB1D4FDAAD149C51 /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTransparentNavigationBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		8E64CD06B05F8E264A3099E2FEE22C65 /* TFForwardAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFForwardAnimator.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		963476D8CACA9ECF4D2B3036AB670964 /* Pods_TFTransparentNavigationBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TFTransparentNavigationBar_Example.framework; path = "Pods-TFTransparentNavigationBar_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A25A420BB7D1E5D05AE634286BE2D6B /* TFTransparentNavigationBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TFTransparentNavigationBar-dummy.m"; sourceTree = "<group>"; };
+		72E20DFA3E39D2EF7199B4806AFA04DF /* CGRect+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CGRect+Tools.swift"; sourceTree = "<group>"; };
+		83241C571851DA25B7EBD43FD58580FD /* TFTransparentNavigationBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TFTransparentNavigationBar.modulemap; sourceTree = "<group>"; };
+		8F852F2E85489E395B913B98E4C59FF1 /* TFTransparentNavigationBar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "TFTransparentNavigationBar-Private.xcconfig"; sourceTree = "<group>"; };
 		9F45B9C434AF1222320178CCD08170B1 /* Pods-TFTransparentNavigationBar_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TFTransparentNavigationBar_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A0E7254579C31972D6A3F7CF3B2D6B8A /* TFNavigationBarAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFNavigationBarAnimator.swift; sourceTree = "<group>"; };
-		AB311432941423541F85713AA77C3B38 /* TFTransparentNavigationBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFTransparentNavigationBar-prefix.pch"; sourceTree = "<group>"; };
-		AFFA4CC2A514517E1124ED7CF3243E6B /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTransparentNavigationBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A4F7D01EF653D7C1339CDEC3157B36A3 /* TFTransparentNavigationBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFTransparentNavigationBar-prefix.pch"; sourceTree = "<group>"; };
+		AA2031B247E996996D971A6EE21D4532 /* TFTransparentNavigationBar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFTransparentNavigationBar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD0FF4A5BA4ADD8C63FB3F9E68CB1F6 /* Pods-TFTransparentNavigationBar_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFTransparentNavigationBar_Example-dummy.m"; sourceTree = "<group>"; };
 		B44F9D966F36BBE58C2CA5256E0B4C4E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9DF086B9153CCFBFFB599533B19DC06 /* Pods-TFTransparentNavigationBar_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFTransparentNavigationBar_Tests-resources.sh"; sourceTree = "<group>"; };
 		BA0A68065F2D66F99739F349816CC60F /* Pods-TFTransparentNavigationBar_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TFTransparentNavigationBar_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BF379880AB8001DDDC0BBC7F377A1C36 /* TFTransparentNavigationBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TFTransparentNavigationBar.modulemap; sourceTree = "<group>"; };
-		BF55638134008A14D955DABDCB01FF1F /* Pods-TFTransparentNavigationBar_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFTransparentNavigationBar_Example-dummy.m"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BF27A4224DEAAAD461AE9AF36ADE2F1E /* TFTransparentNavigationBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TFTransparentNavigationBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2DE063C34AFA44FF7131CFA1D4B778A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C61F2DF90AA111456CF9E3151304A875 /* TFTransparentNavigationBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TFTransparentNavigationBar.xcconfig; sourceTree = "<group>"; };
 		C6CD7C62AC55D5188AB9E095AD9B9D73 /* Pods-TFTransparentNavigationBar_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TFTransparentNavigationBar_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CCC5E0A232FD582DA9FF749C97032D15 /* TFTransparentNavigationBar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TFTransparentNavigationBar.bundle; path = TFTransparentNavigationBar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0C1C917C78DEF9993E19F3E35BD9014 /* Pods-TFTransparentNavigationBar_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TFTransparentNavigationBar_Tests-umbrella.h"; sourceTree = "<group>"; };
+		CBDF5371A102A538089DF839D336F11B /* TFNavigationBarAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFNavigationBarAnimator.swift; sourceTree = "<group>"; };
+		D52F840A8ED8A69CAEF4C3209502773B /* Pods_TFTransparentNavigationBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFTransparentNavigationBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D63B75DAA594CD85EDCF787A170598C5 /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTransparentNavigationBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D69868473D4D65B641114F3DCA543544 /* Pods-TFTransparentNavigationBar_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFTransparentNavigationBar_Tests-dummy.m"; sourceTree = "<group>"; };
+		D9050ABB4814F3407C4266113AE55BDC /* TFNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFNavigationController.swift; sourceTree = "<group>"; };
 		D99A68D7B4ECDBF47A2966D0F3F32E11 /* Pods-TFTransparentNavigationBar_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFTransparentNavigationBar_Example-frameworks.sh"; sourceTree = "<group>"; };
-		E5FB6D39550AAACD3E30D4121BD3E33A /* Pods-TFTransparentNavigationBar_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TFTransparentNavigationBar_Tests.modulemap"; sourceTree = "<group>"; };
-		F887EF2062732B4CC5C0D7781B747482 /* Pods-TFTransparentNavigationBar_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TFTransparentNavigationBar_Example.modulemap"; sourceTree = "<group>"; };
+		E5FB6D39550AAACD3E30D4121BD3E33A /* Pods-TFTransparentNavigationBar_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TFTransparentNavigationBar_Tests.modulemap"; sourceTree = "<group>"; };
+		F887EF2062732B4CC5C0D7781B747482 /* Pods-TFTransparentNavigationBar_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TFTransparentNavigationBar_Example.modulemap"; sourceTree = "<group>"; };
 		F8BF086A39AD2E5D7FD62185E5631688 /* Pods-TFTransparentNavigationBar_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TFTransparentNavigationBar_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		FC83E4B03D9A3343154A45CBE8C1A8A6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		365EEA1F84104215A0AA2BBB65321946 /* Frameworks */ = {
+		033BF7F093760AB102BC313E08E149DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				262832183BC2E1F7F1DC9B2CA943D56B /* Foundation.framework in Frameworks */,
+				67B02592C0E772499D4A5B57C41C366A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE8B4DF5D9E63037F65E0DEE9F53088A /* Frameworks */ = {
+		4EF55D7B90D028B53E17303EB6A7A0BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				740BD859BF9AF5FB2D7C2B612B92C449 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9B822E5C39DB0497BB4883377743184 /* Frameworks */ = {
+		5B3E171A58E6DFE64E29BC41FB650708 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B78D59A52EAA25F1B2A41E7DDF7AB209 /* Foundation.framework in Frameworks */,
+				F9A5184EF0CD0CB555EB5A85267F8A3E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD2861F000952F8D0AB96569F68B7AD7 /* Frameworks */ = {
+		E7EC705745B7B5E5AAE5F72EC919A503 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C2AF65518CB7A59B6527A1B025787F8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,52 +131,23 @@
 				F887EF2062732B4CC5C0D7781B747482 /* Pods-TFTransparentNavigationBar_Example.modulemap */,
 				9F45B9C434AF1222320178CCD08170B1 /* Pods-TFTransparentNavigationBar_Example-acknowledgements.markdown */,
 				C6CD7C62AC55D5188AB9E095AD9B9D73 /* Pods-TFTransparentNavigationBar_Example-acknowledgements.plist */,
-				BF55638134008A14D955DABDCB01FF1F /* Pods-TFTransparentNavigationBar_Example-dummy.m */,
+				ABD0FF4A5BA4ADD8C63FB3F9E68CB1F6 /* Pods-TFTransparentNavigationBar_Example-dummy.m */,
 				D99A68D7B4ECDBF47A2966D0F3F32E11 /* Pods-TFTransparentNavigationBar_Example-frameworks.sh */,
 				0BA23673613FA521034386E0A7C063EF /* Pods-TFTransparentNavigationBar_Example-resources.sh */,
-				302FF3F45DE48F8C35D826F6328B79E0 /* Pods-TFTransparentNavigationBar_Example-umbrella.h */,
-				5375809EC1CCCAD3E75D18439DE440AA /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */,
-				6BA2BB8CF7016E03615A9BDC9E07D57E /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */,
+				2C2455BEB71F34DCB91093FD3E7A5312 /* Pods-TFTransparentNavigationBar_Example-umbrella.h */,
+				592AF2DE67A21C0F33DB237A939FF3C5 /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */,
+				0F25103B8B30B3D1ADA64F963BC02C58 /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */,
 			);
 			name = "Pods-TFTransparentNavigationBar_Example";
 			path = "Target Support Files/Pods-TFTransparentNavigationBar_Example";
 			sourceTree = "<group>";
 		};
-		095048B79510662D256DFAF205B6C961 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				53FF6FF859F9B54CD13BDE729783D9F0 /* Info.plist */,
-				760082FB64AE8E194E02D3CB087F4EF3 /* ResourceBundle-TFTransparentNavigationBar-Info.plist */,
-				BF379880AB8001DDDC0BBC7F377A1C36 /* TFTransparentNavigationBar.modulemap */,
-				77396C1DEC37E2B997347FDDFCEFBD7C /* TFTransparentNavigationBar.xcconfig */,
-				09BBD557A9144327182B5A3AA4018A4A /* TFTransparentNavigationBar-dummy.m */,
-				AB311432941423541F85713AA77C3B38 /* TFTransparentNavigationBar-prefix.pch */,
-				3EA50D0CF4F92B0D8B3797F92FA52117 /* TFTransparentNavigationBar-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/TFTransparentNavigationBar";
-			sourceTree = "<group>";
-		};
 		1F74A69EE1E9931A485E06F89418CBB8 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				36E50D2B6ECBCAD907ED345C67DBB0E3 /* Classes */,
+				66FFCC001A812C0B1960287B200B4A04 /* Classes */,
 			);
-			name = Pod;
 			path = Pod;
-			sourceTree = "<group>";
-		};
-		36E50D2B6ECBCAD907ED345C67DBB0E3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				51F252C8EEE9109BE406FB3223368ACD /* CGRect+Tools.swift */,
-				2FE2E4E17DAEB6CD2D88EE10171885AB /* TFBackwardAnimator.swift */,
-				8E64CD06B05F8E264A3099E2FEE22C65 /* TFForwardAnimator.swift */,
-				A0E7254579C31972D6A3F7CF3B2D6B8A /* TFNavigationBarAnimator.swift */,
-				66D31CF29ECDD5044BC97E0B4DC24CAF /* TFNavigationController.swift */,
-			);
-			name = Classes;
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		461208824A0165A72BC5EAEA6122BC0F /* Pods-TFTransparentNavigationBar_Tests */ = {
@@ -186,23 +157,35 @@
 				E5FB6D39550AAACD3E30D4121BD3E33A /* Pods-TFTransparentNavigationBar_Tests.modulemap */,
 				BA0A68065F2D66F99739F349816CC60F /* Pods-TFTransparentNavigationBar_Tests-acknowledgements.markdown */,
 				F8BF086A39AD2E5D7FD62185E5631688 /* Pods-TFTransparentNavigationBar_Tests-acknowledgements.plist */,
-				71D081DB48638AF1C2C98140DAE27629 /* Pods-TFTransparentNavigationBar_Tests-dummy.m */,
+				D69868473D4D65B641114F3DCA543544 /* Pods-TFTransparentNavigationBar_Tests-dummy.m */,
 				6896BE821228D01AF840CA8A3BD87E1A /* Pods-TFTransparentNavigationBar_Tests-frameworks.sh */,
 				B9DF086B9153CCFBFFB599533B19DC06 /* Pods-TFTransparentNavigationBar_Tests-resources.sh */,
-				D0C1C917C78DEF9993E19F3E35BD9014 /* Pods-TFTransparentNavigationBar_Tests-umbrella.h */,
-				8C12D22BADC13073CB1D4FDAAD149C51 /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */,
-				AFFA4CC2A514517E1124ED7CF3243E6B /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */,
+				2754E876E3A93BC099461A01AFA15929 /* Pods-TFTransparentNavigationBar_Tests-umbrella.h */,
+				624BFF6C25F8325E5FD35A4EF3BADC18 /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */,
+				D63B75DAA594CD85EDCF787A170598C5 /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */,
 			);
 			name = "Pods-TFTransparentNavigationBar_Tests";
 			path = "Target Support Files/Pods-TFTransparentNavigationBar_Tests";
 			sourceTree = "<group>";
 		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+				C2DE063C34AFA44FF7131CFA1D4B778A /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		66FFCC001A812C0B1960287B200B4A04 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				72E20DFA3E39D2EF7199B4806AFA04DF /* CGRect+Tools.swift */,
+				3A266717DE16F904452BC2933BFF8B93 /* TFBackwardAnimator.swift */,
+				23D0CE02C5DF6E705743DC4207A5E119 /* TFForwardAnimator.swift */,
+				CBDF5371A102A538089DF839D336F11B /* TFNavigationBarAnimator.swift */,
+				D9050ABB4814F3407C4266113AE55BDC /* TFNavigationController.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		7544A6B72BBA8E5B4CECDD3B0CFB4F81 /* Development Pods */ = {
@@ -216,10 +199,10 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				7544A6B72BBA8E5B4CECDD3B0CFB4F81 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				CB7A5B650C3BCAB921688320952BE078 /* Products */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				95B380684B91D8CD201AD61D8EB1394B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -236,18 +219,18 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CB7A5B650C3BCAB921688320952BE078 /* Products */ = {
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				963476D8CACA9ECF4D2B3036AB670964 /* Pods_TFTransparentNavigationBar_Example.framework */,
-				05DF21A23C80EFB3CFFF415CFB300112 /* Pods_TFTransparentNavigationBar_Tests.framework */,
-				CCC5E0A232FD582DA9FF749C97032D15 /* TFTransparentNavigationBar.bundle */,
-				1AFCC127B2BF0D10B49DC127113A7914 /* TFTransparentNavigationBar.framework */,
+				D52F840A8ED8A69CAEF4C3209502773B /* Pods_TFTransparentNavigationBar_Example.framework */,
+				52C9678144C6202F3B1C1BD3F22FCE92 /* Pods_TFTransparentNavigationBar_Tests.framework */,
+				AA2031B247E996996D971A6EE21D4532 /* TFTransparentNavigationBar.bundle */,
+				BF27A4224DEAAAD461AE9AF36ADE2F1E /* TFTransparentNavigationBar.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,67 +239,119 @@
 			isa = PBXGroup;
 			children = (
 				1F74A69EE1E9931A485E06F89418CBB8 /* Pod */,
-				095048B79510662D256DFAF205B6C961 /* Support Files */,
+				EFBBD1CACD9AF360E816D1964CFB7246 /* Support Files */,
 			);
 			name = TFTransparentNavigationBar;
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		EFBBD1CACD9AF360E816D1964CFB7246 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC83E4B03D9A3343154A45CBE8C1A8A6 /* Info.plist */,
+				83241C571851DA25B7EBD43FD58580FD /* TFTransparentNavigationBar.modulemap */,
+				C61F2DF90AA111456CF9E3151304A875 /* TFTransparentNavigationBar.xcconfig */,
+				8F852F2E85489E395B913B98E4C59FF1 /* TFTransparentNavigationBar-Private.xcconfig */,
+				6A25A420BB7D1E5D05AE634286BE2D6B /* TFTransparentNavigationBar-dummy.m */,
+				A4F7D01EF653D7C1339CDEC3157B36A3 /* TFTransparentNavigationBar-prefix.pch */,
+				313465F48DFC7A2C9F1663E6C35747BD /* TFTransparentNavigationBar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TFTransparentNavigationBar";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		07F3EF0730CBF39BE732699CF851D3D1 /* Headers */ = {
+		21089BEE1FC51DDACC43CDBF98FF5A70 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81883898846194BE81B5B061F8EBEF1B /* Pods-TFTransparentNavigationBar_Tests-umbrella.h in Headers */,
+				92E26EFBCCF77EC0B3B838D8A63CC4B7 /* Pods-TFTransparentNavigationBar_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C53D9BD5A9CA5418C0C82E7DCA74B06 /* Headers */ = {
+		AD579998F78B4BCAF3AB096840E0E934 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				028E87DB4007BA5BF4E4DC096EA5E9F8 /* Pods-TFTransparentNavigationBar_Example-umbrella.h in Headers */,
+				7001E01F186C4D98D7FF383796EDD034 /* TFTransparentNavigationBar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5164885A11F273EF9FC3A637499B9D3 /* Headers */ = {
+		D5A5F10A483D9DEC2E9C3CFB3D583022 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC4D6DC6142976B1FD1ABB955CFAB29 /* TFTransparentNavigationBar-umbrella.h in Headers */,
+				E73EA29BC529550075475CEE607A0FBF /* Pods-TFTransparentNavigationBar_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		23EC96EE3293A177580503CAD14D6673 /* Pods-TFTransparentNavigationBar_Tests */ = {
+		0E9A968C63A58D8CEF3BEAE12C62B8C8 /* Pods-TFTransparentNavigationBar_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0082A9CF610775951B0CF9125AFA4A0B /* Build configuration list for PBXNativeTarget "Pods-TFTransparentNavigationBar_Tests" */;
+			buildConfigurationList = 8D1A5B6098F0E7FEC44BDE99B60DB4D0 /* Build configuration list for PBXNativeTarget "Pods-TFTransparentNavigationBar_Tests" */;
 			buildPhases = (
-				81311453145ABFB5537D066389364AE8 /* Sources */,
-				365EEA1F84104215A0AA2BBB65321946 /* Frameworks */,
-				07F3EF0730CBF39BE732699CF851D3D1 /* Headers */,
+				7819B40C39082D3246DC06AD1711247D /* Sources */,
+				4EF55D7B90D028B53E17303EB6A7A0BC /* Frameworks */,
+				21089BEE1FC51DDACC43CDBF98FF5A70 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B248847666AD4C29DF2A3FC29C64594A /* PBXTargetDependency */,
+				BA49F16660DBA74595D01291011FD020 /* PBXTargetDependency */,
 			);
 			name = "Pods-TFTransparentNavigationBar_Tests";
 			productName = "Pods-TFTransparentNavigationBar_Tests";
-			productReference = 05DF21A23C80EFB3CFFF415CFB300112 /* Pods_TFTransparentNavigationBar_Tests.framework */;
+			productReference = 52C9678144C6202F3B1C1BD3F22FCE92 /* Pods_TFTransparentNavigationBar_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		68F5702B3E0B0CC66095114A72218A27 /* TFTransparentNavigationBar-TFTransparentNavigationBar */ = {
+		ACECAF67990CB3CFA524575EDFB4477C /* Pods-TFTransparentNavigationBar_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BC0618BF909183F0D7A94559FEDB4EE /* Build configuration list for PBXNativeTarget "TFTransparentNavigationBar-TFTransparentNavigationBar" */;
+			buildConfigurationList = D070CB8344E9B420991ED6F79438D610 /* Build configuration list for PBXNativeTarget "Pods-TFTransparentNavigationBar_Example" */;
 			buildPhases = (
-				9D78E2B18E4DFC1ACA84405E5BDB40B4 /* Sources */,
-				EE8B4DF5D9E63037F65E0DEE9F53088A /* Frameworks */,
-				1E79C1FCD3DABCCA0CB661D9F692602F /* Resources */,
+				62D1449C6AD58E7F1F7E0D13787DEC7B /* Sources */,
+				033BF7F093760AB102BC313E08E149DD /* Frameworks */,
+				D5A5F10A483D9DEC2E9C3CFB3D583022 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B06803E3F12EF8879D006AADEB8BB6F2 /* PBXTargetDependency */,
+			);
+			name = "Pods-TFTransparentNavigationBar_Example";
+			productName = "Pods-TFTransparentNavigationBar_Example";
+			productReference = D52F840A8ED8A69CAEF4C3209502773B /* Pods_TFTransparentNavigationBar_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C6F8B267A292DBC0A52AA743C762A4C6 /* TFTransparentNavigationBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F054958D13C67F5404EA2935C328DEA /* Build configuration list for PBXNativeTarget "TFTransparentNavigationBar" */;
+			buildPhases = (
+				2C10DA3B9FD7FF0137D546C86C237D4C /* Sources */,
+				5B3E171A58E6DFE64E29BC41FB650708 /* Frameworks */,
+				2A9C1982AD0E58BFE169355BA23FB644 /* Resources */,
+				AD579998F78B4BCAF3AB096840E0E934 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D9396D06F5893BF767AE8ED3676E578 /* PBXTargetDependency */,
+			);
+			name = TFTransparentNavigationBar;
+			productName = TFTransparentNavigationBar;
+			productReference = BF27A4224DEAAAD461AE9AF36ADE2F1E /* TFTransparentNavigationBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FC9D56F4FAB76E78E8C1EAB3E6F518C9 /* TFTransparentNavigationBar-TFTransparentNavigationBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A109424EA4E05916A3E7D415675FD16F /* Build configuration list for PBXNativeTarget "TFTransparentNavigationBar-TFTransparentNavigationBar" */;
+			buildPhases = (
+				967AF599DA248B38A6648ACB2F244AC2 /* Sources */,
+				E7EC705745B7B5E5AAE5F72EC919A503 /* Frameworks */,
+				FDC1087C0D70D0CBC242F41D11F89DFB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -324,45 +359,8 @@
 			);
 			name = "TFTransparentNavigationBar-TFTransparentNavigationBar";
 			productName = "TFTransparentNavigationBar-TFTransparentNavigationBar";
-			productReference = CCC5E0A232FD582DA9FF749C97032D15 /* TFTransparentNavigationBar.bundle */;
+			productReference = AA2031B247E996996D971A6EE21D4532 /* TFTransparentNavigationBar.bundle */;
 			productType = "com.apple.product-type.bundle";
-		};
-		A1A2E6CFD726D40BEA7FC2D7AAFD8D7E /* Pods-TFTransparentNavigationBar_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 17C9428E5BD5BC0597AD681AAB7718C3 /* Build configuration list for PBXNativeTarget "Pods-TFTransparentNavigationBar_Example" */;
-			buildPhases = (
-				03EEDE38FA1759975D11179813E3EDAF /* Sources */,
-				FD2861F000952F8D0AB96569F68B7AD7 /* Frameworks */,
-				9C53D9BD5A9CA5418C0C82E7DCA74B06 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				996824496D35C63C2B7217B020CD2A9C /* PBXTargetDependency */,
-			);
-			name = "Pods-TFTransparentNavigationBar_Example";
-			productName = "Pods-TFTransparentNavigationBar_Example";
-			productReference = 963476D8CACA9ECF4D2B3036AB670964 /* Pods_TFTransparentNavigationBar_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		ABA7F375180506092A9B5D9C6631718B /* TFTransparentNavigationBar */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 553D4066C246801920AA772F62F282D7 /* Build configuration list for PBXNativeTarget "TFTransparentNavigationBar" */;
-			buildPhases = (
-				29358ACB7C277A5FAA7E2AFF96DCE04E /* Sources */,
-				F9B822E5C39DB0497BB4883377743184 /* Frameworks */,
-				019E7944B0DD425E2AFD5A43A5D314AA /* Resources */,
-				D5164885A11F273EF9FC3A637499B9D3 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0CFE191E9E38E0FCCBC32DBC332FD70B /* PBXTargetDependency */,
-			);
-			name = TFTransparentNavigationBar;
-			productName = TFTransparentNavigationBar;
-			productReference = 1AFCC127B2BF0D10B49DC127113A7914 /* TFTransparentNavigationBar.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -370,8 +368,13 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					C6F8B267A292DBC0A52AA743C762A4C6 = {
+						LastSwiftMigration = 0820;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -381,28 +384,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CB7A5B650C3BCAB921688320952BE078 /* Products */;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1A2E6CFD726D40BEA7FC2D7AAFD8D7E /* Pods-TFTransparentNavigationBar_Example */,
-				23EC96EE3293A177580503CAD14D6673 /* Pods-TFTransparentNavigationBar_Tests */,
-				ABA7F375180506092A9B5D9C6631718B /* TFTransparentNavigationBar */,
-				68F5702B3E0B0CC66095114A72218A27 /* TFTransparentNavigationBar-TFTransparentNavigationBar */,
+				ACECAF67990CB3CFA524575EDFB4477C /* Pods-TFTransparentNavigationBar_Example */,
+				0E9A968C63A58D8CEF3BEAE12C62B8C8 /* Pods-TFTransparentNavigationBar_Tests */,
+				C6F8B267A292DBC0A52AA743C762A4C6 /* TFTransparentNavigationBar */,
+				FC9D56F4FAB76E78E8C1EAB3E6F518C9 /* TFTransparentNavigationBar-TFTransparentNavigationBar */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		019E7944B0DD425E2AFD5A43A5D314AA /* Resources */ = {
+		2A9C1982AD0E58BFE169355BA23FB644 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB01050B7FF9BCA923E5AE043E5BCC68 /* TFTransparentNavigationBar.bundle in Resources */,
+				F8461A5968EA98B3CDF8EF1D2E8ACDF0 /* TFTransparentNavigationBar.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E79C1FCD3DABCCA0CB661D9F692602F /* Resources */ = {
+		FDC1087C0D70D0CBC242F41D11F89DFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -412,36 +415,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		03EEDE38FA1759975D11179813E3EDAF /* Sources */ = {
+		2C10DA3B9FD7FF0137D546C86C237D4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6BBF4A20CB06C00B56EE781FCBCC287 /* Pods-TFTransparentNavigationBar_Example-dummy.m in Sources */,
+				5D3C9D66AE3FA2B379FCCADD8D86A3D8 /* CGRect+Tools.swift in Sources */,
+				3B5CD685F964E9261142EF792AD79D76 /* TFBackwardAnimator.swift in Sources */,
+				A6C3A7E0F4F68EF89719F2C5EF975AA9 /* TFForwardAnimator.swift in Sources */,
+				8F2F8F9089A6BBB2C62FF0AB541DECD6 /* TFNavigationBarAnimator.swift in Sources */,
+				D16571599CA5535B8C27DAB2FF7591D9 /* TFNavigationController.swift in Sources */,
+				1FBB3896E8D5E12A126DFC6B66493B20 /* TFTransparentNavigationBar-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29358ACB7C277A5FAA7E2AFF96DCE04E /* Sources */ = {
+		62D1449C6AD58E7F1F7E0D13787DEC7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				630090AFBD08008CE0229C0532A42A7F /* CGRect+Tools.swift in Sources */,
-				E780A5B86B22D005F5E61D36854C2D00 /* TFBackwardAnimator.swift in Sources */,
-				E38D1280BEAEE93EECED5BA2BA659F15 /* TFForwardAnimator.swift in Sources */,
-				C8D8B4BC56C66CC7CA271A4E5CB4CD20 /* TFNavigationBarAnimator.swift in Sources */,
-				9B1556CD2234EDEB7A76C907C3D5E631 /* TFNavigationController.swift in Sources */,
-				720BD0FACCBBD8499ABE8374EAAB8A7D /* TFTransparentNavigationBar-dummy.m in Sources */,
+				8FD31DEE5F7390EBDD5C9B7ED2590C7D /* Pods-TFTransparentNavigationBar_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		81311453145ABFB5537D066389364AE8 /* Sources */ = {
+		7819B40C39082D3246DC06AD1711247D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DD20774EDF12BF4D0EBC2DD3D69229B /* Pods-TFTransparentNavigationBar_Tests-dummy.m in Sources */,
+				8C4B93B23DD57A80C5D9BB926C68206B /* Pods-TFTransparentNavigationBar_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D78E2B18E4DFC1ACA84405E5BDB40B4 /* Sources */ = {
+		967AF599DA248B38A6648ACB2F244AC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -451,49 +454,83 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0CFE191E9E38E0FCCBC32DBC332FD70B /* PBXTargetDependency */ = {
+		3D9396D06F5893BF767AE8ED3676E578 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "TFTransparentNavigationBar-TFTransparentNavigationBar";
-			target = 68F5702B3E0B0CC66095114A72218A27 /* TFTransparentNavigationBar-TFTransparentNavigationBar */;
-			targetProxy = EB78CD25EA55BACDAEFD73C2D1B575C2 /* PBXContainerItemProxy */;
+			target = FC9D56F4FAB76E78E8C1EAB3E6F518C9 /* TFTransparentNavigationBar-TFTransparentNavigationBar */;
+			targetProxy = 15E631FFBCD3E29C8AA7D51D857BC2D5 /* PBXContainerItemProxy */;
 		};
-		996824496D35C63C2B7217B020CD2A9C /* PBXTargetDependency */ = {
+		B06803E3F12EF8879D006AADEB8BB6F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TFTransparentNavigationBar;
-			target = ABA7F375180506092A9B5D9C6631718B /* TFTransparentNavigationBar */;
-			targetProxy = 60347DCF31C4FDF2343ECD71ED2CFE6F /* PBXContainerItemProxy */;
+			target = C6F8B267A292DBC0A52AA743C762A4C6 /* TFTransparentNavigationBar */;
+			targetProxy = 8AE87638EF24AA63931345931EC1E9E6 /* PBXContainerItemProxy */;
 		};
-		B248847666AD4C29DF2A3FC29C64594A /* PBXTargetDependency */ = {
+		BA49F16660DBA74595D01291011FD020 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TFTransparentNavigationBar;
-			target = ABA7F375180506092A9B5D9C6631718B /* TFTransparentNavigationBar */;
-			targetProxy = DBB966B817E940C1B398CE38BB771FC0 /* PBXContainerItemProxy */;
+			target = C6F8B267A292DBC0A52AA743C762A4C6 /* TFTransparentNavigationBar */;
+			targetProxy = 329D1021DD5099F8B88B65E4DF158D40 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		25389A488F4F2874F475EBCD4AACA29E /* Debug */ = {
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5375809EC1CCCAD3E75D18439DE440AA /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		232D6E69581D31CE799AB006A38FCC29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F25103B8B30B3D1ADA64F963BC02C58 /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */;
+			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-TFTransparentNavigationBar_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TFTransparentNavigationBar_Example/Pods-TFTransparentNavigationBar_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -501,33 +538,27 @@
 				PRODUCT_NAME = Pods_TFTransparentNavigationBar_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		39240B35F212145A3F89CE201ECA4843 /* Debug */ = {
+		2BA0FAC9A795128A09C2280A61C07986 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C12D22BADC13073CB1D4FDAAD149C51 /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */;
+			baseConfigurationReference = 624BFF6C25F8325E5FD35A4EF3BADC18 /* Pods-TFTransparentNavigationBar_Tests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-TFTransparentNavigationBar_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TFTransparentNavigationBar_Tests/Pods-TFTransparentNavigationBar_Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -544,95 +575,23 @@
 			};
 			name = Debug;
 		};
-		4218A6ADE67DAA66FC0E25F84AD7F532 /* Release */ = {
+		2D12C53F3065D0F47D3198F7EB9FD6CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77396C1DEC37E2B997347FDDFCEFBD7C /* TFTransparentNavigationBar.xcconfig */;
+			baseConfigurationReference = 8F852F2E85489E395B913B98E4C59FF1 /* TFTransparentNavigationBar-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TFTransparentNavigationBar/TFTransparentNavigationBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TFTransparentNavigationBar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TFTransparentNavigationBar/TFTransparentNavigationBar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/Target Support Files/TFTransparentNavigationBar/Info.plist";
 				PRODUCT_NAME = TFTransparentNavigationBar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		536EFAECAC42C75ACD4C86CAD597E109 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BA2BB8CF7016E03615A9BDC9E07D57E /* Pods-TFTransparentNavigationBar_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TFTransparentNavigationBar_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TFTransparentNavigationBar_Example/Pods-TFTransparentNavigationBar_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TFTransparentNavigationBar_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		743B58E307CFA6FAE5FBC4F307BC9F04 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77396C1DEC37E2B997347FDDFCEFBD7C /* TFTransparentNavigationBar.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TFTransparentNavigationBar";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/TFTransparentNavigationBar/ResourceBundle-TFTransparentNavigationBar-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = TFTransparentNavigationBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
-		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -642,58 +601,20 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -706,32 +627,116 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		E55CFED02A04173F04769A1902B8590B /* Release */ = {
+		62C07F5C49B72260D8698BD0DFFB43C9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AFFA4CC2A514517E1124ED7CF3243E6B /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */;
+			baseConfigurationReference = 8F852F2E85489E395B913B98E4C59FF1 /* TFTransparentNavigationBar-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TFTransparentNavigationBar/TFTransparentNavigationBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TFTransparentNavigationBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TFTransparentNavigationBar/TFTransparentNavigationBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = TFTransparentNavigationBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8A47C2E839F95F75251DC9A4E9411522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 592AF2DE67A21C0F33DB237A939FF3C5 /* Pods-TFTransparentNavigationBar_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TFTransparentNavigationBar_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TFTransparentNavigationBar_Example/Pods-TFTransparentNavigationBar_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TFTransparentNavigationBar_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B26DB962339AD275DD6397C921DDE7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F852F2E85489E395B913B98E4C59FF1 /* TFTransparentNavigationBar-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TFTransparentNavigationBar/TFTransparentNavigationBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TFTransparentNavigationBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TFTransparentNavigationBar/TFTransparentNavigationBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = TFTransparentNavigationBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B8CDC25092FD469C6E82BC79E6190C9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D63B75DAA594CD85EDCF787A170598C5 /* Pods-TFTransparentNavigationBar_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-TFTransparentNavigationBar_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TFTransparentNavigationBar_Tests/Pods-TFTransparentNavigationBar_Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -747,100 +752,63 @@
 			};
 			name = Release;
 		};
-		F23FE5D9652CE7FCC75B903DDC94BFF7 /* Release */ = {
+		F8A410F05FA89A0A80AC64FC792A9A6C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77396C1DEC37E2B997347FDDFCEFBD7C /* TFTransparentNavigationBar.xcconfig */;
+			baseConfigurationReference = 8F852F2E85489E395B913B98E4C59FF1 /* TFTransparentNavigationBar-Private.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TFTransparentNavigationBar";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/TFTransparentNavigationBar/ResourceBundle-TFTransparentNavigationBar-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = "$(SRCROOT)/Target Support Files/TFTransparentNavigationBar/Info.plist";
 				PRODUCT_NAME = TFTransparentNavigationBar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
-		F49F78F0B9DE34F201F6C37006DC8045 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77396C1DEC37E2B997347FDDFCEFBD7C /* TFTransparentNavigationBar.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TFTransparentNavigationBar/TFTransparentNavigationBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TFTransparentNavigationBar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TFTransparentNavigationBar/TFTransparentNavigationBar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TFTransparentNavigationBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0082A9CF610775951B0CF9125AFA4A0B /* Build configuration list for PBXNativeTarget "Pods-TFTransparentNavigationBar_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				39240B35F212145A3F89CE201ECA4843 /* Debug */,
-				E55CFED02A04173F04769A1902B8590B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		17C9428E5BD5BC0597AD681AAB7718C3 /* Build configuration list for PBXNativeTarget "Pods-TFTransparentNavigationBar_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				25389A488F4F2874F475EBCD4AACA29E /* Debug */,
-				536EFAECAC42C75ACD4C86CAD597E109 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
-				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		553D4066C246801920AA772F62F282D7 /* Build configuration list for PBXNativeTarget "TFTransparentNavigationBar" */ = {
+		4F054958D13C67F5404EA2935C328DEA /* Build configuration list for PBXNativeTarget "TFTransparentNavigationBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F49F78F0B9DE34F201F6C37006DC8045 /* Debug */,
-				4218A6ADE67DAA66FC0E25F84AD7F532 /* Release */,
+				B26DB962339AD275DD6397C921DDE7DC /* Debug */,
+				62C07F5C49B72260D8698BD0DFFB43C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BC0618BF909183F0D7A94559FEDB4EE /* Build configuration list for PBXNativeTarget "TFTransparentNavigationBar-TFTransparentNavigationBar" */ = {
+		8D1A5B6098F0E7FEC44BDE99B60DB4D0 /* Build configuration list for PBXNativeTarget "Pods-TFTransparentNavigationBar_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				743B58E307CFA6FAE5FBC4F307BC9F04 /* Debug */,
-				F23FE5D9652CE7FCC75B903DDC94BFF7 /* Release */,
+				2BA0FAC9A795128A09C2280A61C07986 /* Debug */,
+				B8CDC25092FD469C6E82BC79E6190C9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A109424EA4E05916A3E7D415675FD16F /* Build configuration list for PBXNativeTarget "TFTransparentNavigationBar-TFTransparentNavigationBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D12C53F3065D0F47D3198F7EB9FD6CA /* Debug */,
+				F8A410F05FA89A0A80AC64FC792A9A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D070CB8344E9B420991ED6F79438D610 /* Build configuration list for PBXNativeTarget "Pods-TFTransparentNavigationBar_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A47C2E839F95F75251DC9A4E9411522 /* Debug */,
+				232D6E69581D31CE799AB006A38FCC29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

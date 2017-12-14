@@ -26,13 +26,19 @@ open class TFNavigationController: UINavigationController, UIViewControllerTrans
             addPanGestureRecognizer()
         }
     }
+
+    open var isTransitionInteractive: Bool {
+        get {
+            return interactionController != nil
+        }
+    }
     
     fileprivate var interactionController: UIPercentDrivenInteractiveTransition?
     fileprivate var temporaryBackgroundImage: UIImage?
-    var navigationBarSnapshots: Dictionary<Int, UIView> = Dictionary()
+    open var navigationBarSnapshots: Dictionary<Int, UIView> = Dictionary()
     
     
-    func createNavigationBarSnapshot(fromViewController: UIViewController) {
+    open func createNavigationBarSnapshot(fromViewController: UIViewController) {
         
         let navbarSnapshot = self.navigationBar.resizableSnapshotView(from: self.navigationBar.bounds.additiveRect(20, direction: .top), afterScreenUpdates: false, withCapInsets: UIEdgeInsetsMake(0, 0, 0, 0))
         
@@ -85,7 +91,7 @@ open class TFNavigationController: UINavigationController, UIViewControllerTrans
         edgePanGestureRecognizer = recognizer
     }
     
-    
+    @objc
     func handleSwipeFromLeft(_ gesture: UIScreenEdgePanGestureRecognizer) {
         
         let location = gesture.translation(in: gesture.view!)
