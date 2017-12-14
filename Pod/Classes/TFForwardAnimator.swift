@@ -27,8 +27,8 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         
         // HAX: https://stackoverflow.com/a/45578760/1161723
         if #available(iOS 11.0, *) {
-            if let scrollView = toView.subviews.first as? UIScrollView {
-                scrollView.contentInsetAdjustmentBehavior = .never
+            [toView, toView.subviews.first as Any].flatMap({ $0 as? UIScrollView }).forEach() {
+                $0.contentInsetAdjustmentBehavior = .never
             }
         }
         
