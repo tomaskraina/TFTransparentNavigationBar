@@ -37,7 +37,7 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
             animateToTransparent(containerView: containerView, fromView: fromView, toView: toView, duration: duration, options: options, context: context)
         case .toSolid:
             animateToSolid(containerView: containerView, fromView: fromView, toView: toView, duration: duration, options: options, context: context)
-        case .toSame: 
+        case .toSame:
             animateToSame(containerView, fromView: fromView, toView: toView, duration: duration, options: options, context: context)
         }
     }
@@ -65,7 +65,8 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         let navigationControllerFrame = navigationController.view.frame
         
         var toViewFinalFrame = context.finalFrame(for: toViewController)
-        toViewFinalFrame = toViewFinalFrame.additiveRect(-64, direction: .top)
+        
+        toViewFinalFrame = toViewFinalFrame.additiveRect(isIphoneX() ? -88 : -64, direction: .top)
         
         // Move toView to the right
         toView.frame = toViewFinalFrame.offsetBy(dx: toViewFinalFrame.width, dy: 0)
@@ -74,7 +75,9 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         let fromViewFinalFrame = navigationControllerFrame.offsetBy(dx: -(navigationControllerFrame.width * 0.3), dy: 0)
         
         // Save origin navigation bar frame
-        let navigationBarFinalFrame = self.navigationController.navigationBar.frame
+        // FIX: this reports incorrect origin on iPhoneX
+        var navigationBarFinalFrame = self.navigationController.navigationBar.frame
+        navigationBarFinalFrame.origin.y = navigationController.topLayoutGuide.length
         
         // Shift bar
         self.navigationController.navigationBar.frame = navigationBarFinalFrame.offsetBy(dx: navigationBarFinalFrame.width, dy: 0)
@@ -90,14 +93,14 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
             // Shift navigation bar
             self.navigationController.navigationBar.frame = navigationBarFinalFrame
             
-            }, completion: { (completed) -> Void in
-                // Show fromView
-                fromView.frame = fromViewFinalFrame
-                fromView.isHidden = false
-                // Remove snapshot
-                fromViewSnapshot.removeFromSuperview()
-                // Inform about transaction completion state
-                context.completeTransition(!context.transitionWasCancelled)
+        }, completion: { (completed) -> Void in
+            // Show fromView
+            fromView.frame = fromViewFinalFrame
+            fromView.isHidden = false
+            // Remove snapshot
+            fromViewSnapshot.removeFromSuperview()
+            // Inform about transaction completion state
+            context.completeTransition(!context.transitionWasCancelled)
         })
         
     }
@@ -133,7 +136,9 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         let fromViewFinalFrame = navigationControllerFrame.offsetBy(dx: -(navigationControllerFrame.width * 0.3), dy: 0)
         
         // Save origin navigation bar frame
-        let navigationBarFrame = self.navigationController.navigationBar.frame
+        // FIX: this reports incorrect origin on iPhoneX
+        var navigationBarFrame = self.navigationController.navigationBar.frame
+        navigationBarFrame.origin.y = navigationController.topLayoutGuide.length
         
         // Shift bar
         self.navigationController.navigationBar.frame = navigationBarFrame.offsetBy(dx: navigationBarFrame.width, dy: 0)
@@ -150,14 +155,14 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
             // Shift navigation bar
             self.navigationController.navigationBar.frame = navigationBarFrame
             
-            }, completion: { (completed) -> Void in
-                // Show fromView
-                fromView.frame = fromViewFinalFrame
-                fromView.isHidden = false
-                // Remove snapshot
-                fromViewSnapshot.removeFromSuperview()
-                // Inform about transaction completion state
-                context.completeTransition(!context.transitionWasCancelled)
+        }, completion: { (completed) -> Void in
+            // Show fromView
+            fromView.frame = fromViewFinalFrame
+            fromView.isHidden = false
+            // Remove snapshot
+            fromViewSnapshot.removeFromSuperview()
+            // Inform about transaction completion state
+            context.completeTransition(!context.transitionWasCancelled)
         })
     }
     
@@ -183,10 +188,20 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
             toView.frame = toViewFinalFrame
             fromView.frame = fromViewFinalFrame
             
-            }, completion: { (completed) -> Void in
-
-                // Inform about transaction completion state
-                context.completeTransition(!context.transitionWasCancelled)
+        }, completion: { (completed) -> Void in
+            
+            // Inform about transaction completion state
+            context.completeTransition(!context.transitionWasCancelled)
         })
     }
+    
+    func animationEnded(_ transitionCompleted: Bool) {
+        
+        // Sometimes, when a first view controller is popped out of navigation controller,
+        // the view controller has hidesBottomBarOnPush=true, and tab bar has a custom subview added,
+        // a tab bar controller (parent of the navigation controler) shrinks its content view
+        // after the transition is completed. Calling `setNeedsLayout` fixes it.
+        navigationController.tabBarController?.view.setNeedsLayout()
+    }
 }
+

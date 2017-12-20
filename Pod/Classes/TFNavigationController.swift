@@ -16,6 +16,10 @@ import UIKit
     func navigationControllerBarPushStyle() -> TFNavigationBarStyle
 }
 
+func isIphoneX() -> Bool {
+    return UIScreen.main.bounds.size.height == 812
+}
+
 open class TFNavigationController: UINavigationController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, UINavigationBarDelegate {
     
     /// Use this property to disable swipe to pop
@@ -38,13 +42,16 @@ open class TFNavigationController: UINavigationController, UIViewControllerTrans
     open var navigationBarSnapshots: Dictionary<Int, UIView> = Dictionary()
     
     
+    /// Creates a snapshot of the whole navigation bar including the status bar and saves it for pop animation
     open func createNavigationBarSnapshot(fromViewController: UIViewController) {
+        // Let's assume the height of status bar is the origin of navigation bar
+        let statusBarHeight = navigationBar.frame.origin.y
+        let frameToSnapshot = navigationBar.bounds.additiveRect(statusBarHeight, direction: .top)
+        let navbarSnapshot = navigationBar.resizableSnapshotView(from: frameToSnapshot, afterScreenUpdates: false, withCapInsets: .zero)
         
-        let navbarSnapshot = self.navigationBar.resizableSnapshotView(from: self.navigationBar.bounds.additiveRect(20, direction: .top), afterScreenUpdates: false, withCapInsets: UIEdgeInsetsMake(0, 0, 0, 0))
-        
-        // Save snapshot of navigation bar for pop animation
-        if let index = self.viewControllers.index(of: fromViewController) {
-            self.navigationBarSnapshots[index] = navbarSnapshot
+        // Save the snapshot of navigation bar for pop animation
+        if let index = viewControllers.index(of: fromViewController) {
+            navigationBarSnapshots[index] = navbarSnapshot
         }
     }
     
