@@ -66,7 +66,7 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         
         var toViewFinalFrame = context.finalFrame(for: toViewController)
         
-        toViewFinalFrame = toViewFinalFrame.additiveRect(isIphoneX() ? -88 : -64, direction: .top)
+        toViewFinalFrame = toViewFinalFrame.additiveRect(navigationBarOffset() * -1.0, direction: .top)
         
         // Move toView to the right
         toView.frame = toViewFinalFrame.offsetBy(dx: toViewFinalFrame.width, dy: 0)

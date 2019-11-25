@@ -16,8 +16,15 @@ import UIKit
     func navigationControllerBarPushStyle() -> TFNavigationBarStyle
 }
 
-func isIphoneX() -> Bool {
-    return UIScreen.main.bounds.size.height == 812
+func navigationBarOffset() -> CGFloat {
+    guard let window = UIApplication.shared.keyWindow else { return 0.0 }
+
+    let defaultNavBarHeight: CGFloat = 44.0
+    if #available(iOS 11.0, *) {
+        return window.safeAreaInsets.top + defaultNavBarHeight
+    } else {
+        return defaultNavBarHeight
+    }
 }
 
 open class TFNavigationController: UINavigationController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, UINavigationBarDelegate {
