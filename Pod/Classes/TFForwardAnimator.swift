@@ -19,7 +19,7 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         let containerView = context.containerView
         let toView = context.view(forKey: UITransitionContextViewKey.to)!
         let fromView = context.view(forKey: UITransitionContextViewKey.from)!
-        let options: UIViewAnimationOptions = isInteractive ? [.curveLinear] : [.curveEaseOut]
+        let options: UIView.AnimationOptions = isInteractive ? [.curveLinear] : [.curveEaseOut]
         let duration = self.transitionDuration(using: context)
         
         // Insert toView above from view
@@ -27,7 +27,7 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         
         // HAX: https://stackoverflow.com/a/45578760/1161723
         if #available(iOS 11.0, *) {
-            [toView, toView.subviews.first as Any].flatMap({ $0 as? UIScrollView }).forEach() {
+            [toView, toView.subviews.first as Any].compactMap { $0 as? UIScrollView }.forEach {
                 $0.contentInsetAdjustmentBehavior = .never
             }
         }
@@ -43,7 +43,7 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
     }
     
     
-    func animateToSolid(containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
+    func animateToSolid(containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIView.AnimationOptions, context: UIViewControllerContextTransitioning) {
         
         let fromViewController = context.viewController(forKey: UITransitionContextViewControllerKey.from)!
         let toViewController = context.viewController(forKey: UITransitionContextViewControllerKey.to)!
@@ -106,7 +106,7 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
     }
     
     
-    func animateToTransparent(containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
+    func animateToTransparent(containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIView.AnimationOptions, context: UIViewControllerContextTransitioning) {
         
         let fromViewController = context.viewController(forKey: UITransitionContextViewControllerKey.from)!
         let toViewController = context.viewController(forKey: UITransitionContextViewControllerKey.to)!
@@ -166,7 +166,7 @@ class TFForwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTransi
         })
     }
     
-    func animateToSame(_ containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
+    func animateToSame(_ containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIView.AnimationOptions, context: UIViewControllerContextTransitioning) {
         
         let fromViewController = context.viewController(forKey: UITransitionContextViewControllerKey.from)!
         let toViewController = context.viewController(forKey: UITransitionContextViewControllerKey.to)!

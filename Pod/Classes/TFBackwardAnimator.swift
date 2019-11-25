@@ -19,7 +19,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         let containerView = context.containerView
         let toView = context.view(forKey: UITransitionContextViewKey.to)!
         let fromView = context.view(forKey: UITransitionContextViewKey.from)!
-        let options: UIViewAnimationOptions = isInteractive ? [.curveLinear] : [.curveEaseOut]
+        let options: UIView.AnimationOptions = isInteractive ? [.curveLinear] : [.curveEaseOut]
         let duration = self.transitionDuration(using: context)
         
         // Insert toView below from view
@@ -34,7 +34,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         }
     }
     
-    func animateToSame(containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
+    func animateToSame(containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIView.AnimationOptions, context: UIViewControllerContextTransitioning) {
         
         let fromViewController = context.viewController(forKey: UITransitionContextViewControllerKey.from)!
         let toViewController = context.viewController(forKey: UITransitionContextViewControllerKey.to)!
@@ -62,7 +62,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         })
     }
     
-    func animateTransition(containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIViewAnimationOptions, context: UIViewControllerContextTransitioning) {
+    func animateTransition(containerView: UIView, fromView: UIView, toView: UIView, duration: TimeInterval, options: UIView.AnimationOptions, context: UIViewControllerContextTransitioning) {
         
         let containerView = context.containerView
         let fromViewController = context.viewController(forKey: UITransitionContextViewControllerKey.from)!
@@ -75,7 +75,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         let fromFrame = context.initialFrame(for: fromViewController)
         
         var toViewControllerNavigationBarSnapshot: UIView?
-        if let index = navigationController.viewControllers.index(of: toViewController), let navigationBarSnapshot = self.navigationController.navigationBarSnapshots[index] {
+        if let index = navigationController.viewControllers.firstIndex(of: toViewController), let navigationBarSnapshot = self.navigationController.navigationBarSnapshots[index] {
             toViewControllerNavigationBarSnapshot = navigationBarSnapshot
         }
         
@@ -85,7 +85,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         // Create snapshot from navigation controller content
         // It's because we want the animate the whole content including transparent navbar, not just the child VC's content
         guard let fromViewSnapshot = navigationController.view.snapshotView(afterScreenUpdates: false) else {
-            fatalError("Can't create a snapshot of view=\(navigationController.view)")
+            fatalError("Can't create a snapshot of view=\(navigationController.view.debugDescription)")
         }
         
         navigationController.setupNavigationBarByStyle(self.navigationBarStyleTransition)
@@ -161,7 +161,7 @@ class TFBackwardAnimator: TFNavigationBarAnimator, UIViewControllerAnimatedTrans
         // Add shadows
         addShadows(toViews: [fromView, fromViewSnapshot])
         
-        let options: UIViewAnimationOptions = isInteractive ? [.curveLinear] : [.curveEaseOut]
+        let options: UIView.AnimationOptions = isInteractive ? [.curveLinear] : [.curveEaseOut]
         
         UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: { () -> Void in
             

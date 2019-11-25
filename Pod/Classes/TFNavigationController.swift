@@ -50,7 +50,7 @@ open class TFNavigationController: UINavigationController, UIViewControllerTrans
         let navbarSnapshot = navigationBar.resizableSnapshotView(from: frameToSnapshot, afterScreenUpdates: false, withCapInsets: .zero)
         
         // Save the snapshot of navigation bar for pop animation
-        if let index = viewControllers.index(of: fromViewController) {
+        if let index = viewControllers.firstIndex(of: fromViewController) {
             navigationBarSnapshots[index] = navbarSnapshot
         }
     }
@@ -172,7 +172,7 @@ open class TFNavigationController: UINavigationController, UIViewControllerTrans
         }
     }
     
-    open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         if operation == .push {
             return self.forwardAnimator(fromVC, toViewController: toVC)
